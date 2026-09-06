@@ -1,3 +1,4 @@
+// filtro de las tarjetas de habilidades (cocina, electronica, musica, etc)
 document.addEventListener("DOMContentLoaded", () => {
   const filtros = document.getElementById("filtros-habilidades");
   if (!filtros) return;
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // por defecto arranca mostrando el que ya tiene la clase activo en el html
   const activoInicial = botones.find((b) => b.classList.contains("activo")) || botones[0];
   if (activoInicial) {
     activoInicial.classList.add("activo");
@@ -27,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// esfera de iconos con la cabeza en el medio
 document.addEventListener("DOMContentLoaded", () => {
   const escena = document.querySelector(".sphere-scene");
   const esfera = document.getElementById("skills-arena");
@@ -34,11 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const items = Array.from(esfera.querySelectorAll(".skill-item"));
   const total = items.length;
-  const anguloDorado = Math.PI * (3 - Math.sqrt(5));
+  const anguloDorado = Math.PI * (3 - Math.sqrt(5)); // fibonacci sphere, reparte los puntos parejo
 
-  // proporcion radio/ancho calibrada sobre el diseño original (352px de
-  // radio con un contenedor de 840px), asi la esfera escala de verdad
-  // en vez de solo achicarse con un transform:scale fijo por breakpoint
+  // el radio lo calculo en base al ancho real del contenedor y no con un
+  // numero fijo, asi la esfera achica bien en mobile (antes se salia
+  // del viewport en pantallas chicas)
   const proporcionRadio = 352 / 840;
 
   function posicionarEsfera() {
@@ -62,12 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
       item.style.transform =
         `translate3d(${posX}px, ${posY}px, ${posZ}px) rotateY(${rotY}deg) rotateX(${rotX}deg)`;
 
+      // los iconos que quedan mas cerca de la camara (z positivo) se
+      // dibujan arriba de la cabeza, los del otro lado quedan atras
       item.style.zIndex = Math.round(posZ);
     });
   }
 
   posicionarEsfera();
 
+  // recalcula todo si cambia el tamaño de la ventana
   let temporizadorResize = null;
   window.addEventListener("resize", () => {
     clearTimeout(temporizadorResize);
@@ -75,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// carousel de peliculas y discos (funciona para cualquier cantidad de carousels en la pagina)
 document.addEventListener("DOMContentLoaded", () => {
   const carouseles = document.querySelectorAll(".carousel");
 
@@ -90,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let indiceActual = 0;
 
+    // arma los puntitos de navegacion segun la cantidad de slides que haya
     slides.forEach((_, i) => {
       const punto = document.createElement("button");
       punto.type = "button";
@@ -101,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const puntos = Array.from(contenedorPuntos.querySelectorAll(".carousel-punto"));
 
+    // reasignar el src reinicia el iframe y frena el video/spotify que estuviera sonando
     function detenerReproduccion(slide) {
       const iframe = slide.querySelector("iframe");
       if (iframe) {
@@ -129,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// tarjetas de juegos favoritos: click para dar vuelta y ver genero/año
 document.addEventListener("DOMContentLoaded", () => {
   const juegos = document.querySelectorAll(".juego-card");
 
@@ -143,6 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         temporizador = null;
       }
 
+      // si quedo girada, a los 3 segundos vuelve sola
       if (juego.classList.contains("girada")) {
         temporizador = setTimeout(() => {
           juego.classList.remove("girada");
@@ -153,6 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     juego.addEventListener("click", alternarGiro);
 
+    // para que tambien funcione con el teclado (enter o espacio)
     juego.addEventListener("keydown", (evento) => {
       if (evento.key === "Enter" || evento.key === " ") {
         evento.preventDefault();
