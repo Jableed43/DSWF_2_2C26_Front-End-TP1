@@ -653,3 +653,83 @@ model-viewer::part(default-progress-bar) {
     font-weight: 700;
 }
 
+/* ===== Media queries de perfil-2 (breakpoints: 1200px / 900px / 400px) ===== */
+
+@media (max-width: 1200px) {
+    .skill-block,
+    .carousel,
+    .juegos-grid {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .nombre-brillante {
+        font-size: 1.6rem;
+    }
+
+    .sphere-scene {
+        transform: scale(0.8);
+        transform-origin: top center;
+        margin-bottom: calc(90vw * -0.2);
+    }
+
+    .skill-fila {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skill-lista {
+        max-width: 100%;
+    }
+
+    .juegos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 1rem;
+    }
+
+    .carousel {
+        padding: 0 2.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .nombre-brillante {
+        font-size: 1.25rem;
+    }
+
+    .sphere-scene {
+        transform: scale(0.5);
+        transform-origin: top center;
+        margin-top: 1.5rem;
+        margin-bottom: calc(90vw * -0.3);
+    }
+
+    .skill-visual--cocina,
+    .skill-visual--electronica {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .juegos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        padding: 0 1rem;
+    }
+
+    .filtros li {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .carousel {
+        padding: 0 2rem;
+    }
+
+    .carousel-flecha {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+}
