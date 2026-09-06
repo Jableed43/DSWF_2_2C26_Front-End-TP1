@@ -1,0 +1,193 @@
+:root {
+    --color-principal: #2563eb;
+    --color-secundario: #1e40af;
+    --color-fondo: #f8fafc;
+    --color-superficie: #ffffff;
+    --color-texto: #1e293b;
+    --color-texto-secundario: #64748b;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: "Poppins", sans-serif;
+}
+
+#titulo-habilidades,
+#titulo-peliculas,
+#titulo-discos,
+#titulo-juegos {
+    color: var(--color-texto);
+    text-align: center;
+}
+
+.nombre-brillante {
+    text-align: center;
+    background-image: linear-gradient(
+        90deg,
+        var(--color-texto) 0%,
+        var(--color-texto) 40%,
+        var(--color-principal) 50%,
+        var(--color-texto) 60%,
+        var(--color-texto) 100%
+    );
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: brillo-nombre 3s ease-in-out infinite alternate;
+}
+
+@keyframes brillo-nombre {
+    from {
+        background-position: 0% 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nombre-brillante {
+        animation: none;
+        background: none;
+        text-shadow: none;
+        color: var(--color-principal);
+    }
+}
+
+.sphere-scene {
+    position: relative;
+    width: 840px;
+    height: 840px;
+    max-width: 90vw;
+    max-height: 90vw;
+    margin: 1rem auto 0;
+    perspective: 1300px;
+}
+
+.sphere-scene::before {
+    content: "";
+    position: absolute;
+    inset: -10%;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.16) 0%, rgba(37, 99, 235, 0) 70%);
+    z-index: 0;
+}
+
+.sphere-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    margin-top: -15%;
+    margin-left: -15%;
+    z-index: 0;
+    /* PRUEBA modelo 3D: auto-rotate del <model-viewer> reemplaza esta animación.
+       Para volver a la foto plana, descomentar la línea de abajo. */
+    /* animation: rotar-esfera-inversa 80s linear infinite; */
+}
+
+model-viewer {
+    --progress-bar-height: 0px;
+}
+model-viewer::part(default-progress-bar) {
+    display: none;
+}
+
+.sphere-core img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+@keyframes rotar-esfera-inversa {
+    from {
+        transform: rotateY(360deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+#skills-arena {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transform-style: preserve-3d;
+    animation: rotar-esfera 40s linear infinite;
+    z-index: 1;
+}
+
+.skill-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    margin: -60px 0 0 -60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: visible;
+}
+
+.skill-icono {
+    width: 66px;
+    height: 66px;
+    display: block;
+    background-image: linear-gradient(
+        90deg,
+        var(--color-texto) 0%,
+        var(--color-texto) 40%,
+        var(--color-principal) 50%,
+        var(--color-texto) 60%,
+        var(--color-texto) 100%
+    );
+    background-size: 220% 100%;
+    -webkit-mask-image: var(--icono);
+    mask-image: var(--icono);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    animation: brillo-nombre 3s ease-in-out infinite alternate;
+    transition: transform 0.2s ease;
+}
+
+.skill-item:hover .skill-icono {
+    transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skill-icono {
+        animation: none;
+        background-position: 50% 0;
+    }
+}
+
+.skill-item span:not(.skill-icono) {
+    display: none;
+}
+
+@keyframes rotar-esfera {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #skills-arena,
+    .sphere-core {
+        animation: none;
+    }
+}
+
