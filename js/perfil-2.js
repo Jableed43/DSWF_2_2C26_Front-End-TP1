@@ -119,14 +119,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const juegos = document.querySelectorAll(".juego-card");
 
   juegos.forEach((juego) => {
-    juego.addEventListener("click", () => {
+    let temporizador = null;
+
+    function alternarGiro() {
       juego.classList.toggle("girada");
-    });
+
+      if (temporizador) {
+        clearTimeout(temporizador);
+        temporizador = null;
+      }
+
+      if (juego.classList.contains("girada")) {
+        temporizador = setTimeout(() => {
+          juego.classList.remove("girada");
+          temporizador = null;
+        }, 3000);
+      }
+    }
+
+    juego.addEventListener("click", alternarGiro);
 
     juego.addEventListener("keydown", (evento) => {
       if (evento.key === "Enter" || evento.key === " ") {
         evento.preventDefault();
-        juego.classList.toggle("girada");
+        alternarGiro();
       }
     });
   });
