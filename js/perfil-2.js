@@ -1,4 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const filtros = document.getElementById("filtros-habilidades");
+  if (!filtros) return;
+
+  const botones = Array.from(filtros.querySelectorAll("li"));
+  const tarjetas = Array.from(document.querySelectorAll(".skill-block[data-categoria]"));
+
+  function aplicarFiltro(filtro) {
+    tarjetas.forEach((tarjeta) => {
+      const coincide = filtro === "*" || tarjeta.dataset.categoria === filtro;
+      tarjeta.classList.toggle("oculto", !coincide);
+    });
+  }
+
+  botones.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      botones.forEach((b) => b.classList.remove("activo"));
+      boton.classList.add("activo");
+      aplicarFiltro(boton.dataset.filtro);
+    });
+  });
+
+  const activoInicial = botones.find((b) => b.classList.contains("activo")) || botones[0];
+  if (activoInicial) {
+    activoInicial.classList.add("activo");
+    aplicarFiltro(activoInicial.dataset.filtro);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const esfera = document.getElementById("skills-arena");
   if (!esfera) return;
 
