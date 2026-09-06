@@ -109,3 +109,20 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarVista();
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const juegos = document.querySelectorAll(".juego-card");
+
+  juegos.forEach((juego) => {
+    juego.addEventListener("click", () => {
+      juego.classList.toggle("girada");
+    });
+
+    juego.addEventListener("keydown", (evento) => {
+      if (evento.key === "Enter" || evento.key === " ") {
+        evento.preventDefault();
+        juego.classList.toggle("girada");
+      }
+    });
+  });
+});
