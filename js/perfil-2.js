@@ -28,36 +28,50 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const escena = document.querySelector(".sphere-scene");
   const esfera = document.getElementById("skills-arena");
-  if (!esfera) return;
+  if (!escena || !esfera) return;
 
   const items = Array.from(esfera.querySelectorAll(".skill-item"));
   const total = items.length;
-  const radio = 352;
   const anguloDorado = Math.PI * (3 - Math.sqrt(5));
 
-  items.forEach((item, i) => {
-    const y = 1 - (i / (total - 1)) * 2;
-    const radioEnY = Math.sqrt(1 - y * y);
-    const theta = anguloDorado * i;
+  // proporcion radio/ancho calibrada sobre el diseño original (352px de
+  // radio con un contenedor de 840px), asi la esfera escala de verdad
+  // en vez de solo achicarse con un transform:scale fijo por breakpoint
+  const proporcionRadio = 352 / 840;
 
-    const x = Math.cos(theta) * radioEnY;
-    const z = Math.sin(theta) * radioEnY;
+  function posicionarEsfera() {
+    const radio = escena.clientWidth * proporcionRadio;
 
-    const posX = x * radio;
-    const posY = y * radio;
-    const posZ = z * radio;
+    items.forEach((item, i) => {
+      const y = 1 - (i / (total - 1)) * 2;
+      const radioEnY = Math.sqrt(1 - y * y);
+      const theta = anguloDorado * i;
 
-    const rotY = Math.atan2(x, z) * (180 / Math.PI);
-    const rotX = -Math.asin(y) * (180 / Math.PI);
+      const x = Math.cos(theta) * radioEnY;
+      const z = Math.sin(theta) * radioEnY;
 
-    item.style.transform =
-      `translate3d(${posX}px, ${posY}px, ${posZ}px) rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+      const posX = x * radio;
+      const posY = y * radio;
+      const posZ = z * radio;
 
-    // z-index proporcional a la profundidad real (posZ): los íconos más
-    // cerca de cámara (z positivo) pintan por delante de la cabeza
-    // (z-index 0), los que quedan del otro lado de la esfera pintan detrás.
-    item.style.zIndex = Math.round(posZ);
+      const rotY = Math.atan2(x, z) * (180 / Math.PI);
+      const rotX = -Math.asin(y) * (180 / Math.PI);
+
+      item.style.transform =
+        `translate3d(${posX}px, ${posY}px, ${posZ}px) rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+
+      item.style.zIndex = Math.round(posZ);
+    });
+  }
+
+  posicionarEsfera();
+
+  let temporizadorResize = null;
+  window.addEventListener("resize", () => {
+    clearTimeout(temporizadorResize);
+    temporizadorResize = setTimeout(posicionarEsfera, 150);
   });
 });
 
