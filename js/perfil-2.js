@@ -53,6 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     item.style.transform =
       `translate3d(${posX}px, ${posY}px, ${posZ}px) rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+
+    // z-index proporcional a la profundidad real (posZ): los íconos más
+    // cerca de cámara (z positivo) pintan por delante de la cabeza
+    // (z-index 0), los que quedan del otro lado de la esfera pintan detrás.
+    item.style.zIndex = Math.round(posZ);
   });
 });
 

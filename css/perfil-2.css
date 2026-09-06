@@ -83,9 +83,11 @@ body {
     margin-top: -15%;
     margin-left: -15%;
     z-index: 0;
-    /* PRUEBA modelo 3D: auto-rotate del <model-viewer> reemplaza esta animación.
-       Para volver a la foto plana, descomentar la línea de abajo. */
-    /* animation: rotar-esfera-inversa 80s linear infinite; */
+    /* Cancela la rotación del grupo (#skills-arena) para que la cabeza,
+       al vivir ahora dentro del mismo contexto de apilamiento que los
+       íconos (necesario para el z-index proporcional por profundidad),
+       no gire como una tarjeta plana junto con ellos. */
+    animation: rotar-esfera 40s linear infinite reverse;
 }
 
 model-viewer {
