@@ -102,6 +102,7 @@ body {
     max-height: 90vw;
     margin: 1rem auto 0;
     perspective: 1300px;
+    overflow: hidden;
 }
 
 .sphere-scene::before {
