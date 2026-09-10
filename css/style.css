@@ -1,5 +1,78 @@
-@media (min-width: 400px) { ... }
+/* ==========================================================================
+   1. DISEÑO BASE: CELULAR (Pantallas normales de smartphones)
+   Rango: Desde 361px hasta 767px. 
+   Aquí va tu diseño estándar para móviles (1 columna, menús colapsados).
+   ========================================================================== */
+body {
+    font-size: 16px;
+}
 
-@media (min-width: 900px) { ... }
+.navbar {
+    flex-direction: column; /* El menú se apila verticalmente en móviles */
+    gap: 15px;
+}
 
-@media (min-width: 1200px) { ... }
+.hero-title {
+    font-size: 2.2rem;
+}
+
+.features-grid {
+    grid-template-columns: 1fr; /* Una sola columna para tarjetas */
+    gap: 20px;
+}
+
+
+/* ==========================================================================
+   2. MEDIA QUERY: CELULAR MINIATURA / SMARTWATCHES
+   Rango: Pantallas de 360px o menos (ej. iPhone SE antiguo, relojes, pantallas mini)
+   ========================================================================== */
+@media screen and (max-width: 360px) {
+    body {
+        font-size: 14px; /* Reducimos texto general para evitar desbordes */
+        padding: 5px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem; /* Títulos más pequeños */
+    }
+
+    .btn {
+        padding: 10px 15px;
+        width: 100%; /* Botones a lo ancho total para facilitar el clic */
+        text-align: center;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ==========================================================================
+   3. MEDIA QUERY: ESCRITORIO / PANTALLAS GRANDES
+   Rango: Desde 768px en adelante (Tabletas en horizontal, Laptops y Monitores)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Menú horizontal clásico */
+        justify-content: space-between;
+    }
+
+    .hero-section {
+        padding: 80px 40px;
+        text-align: left; /* Alineación limpia a la izquierda */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        max-width: 600px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 Columnas puras de tarjetas */
+        gap: 30px;
+    }
+}
