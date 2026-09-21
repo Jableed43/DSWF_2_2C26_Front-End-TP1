@@ -12,14 +12,14 @@
     --gray-border: #dddddd;
 }
 
-header {
+body > header {
     background-color: var(--white);
     border-bottom: 1px solid var(--gray-border);
 }
 
 /* pegajoso solo en pantallas grandes: en mobile el header apilado ocupa demasiado alto */
 @media screen and (min-width: 768px) {
-    header {
+    body > header {
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -79,7 +79,7 @@ header {
     background-color: var(--primary-blue);
 }
 
-footer {
+body > footer {
     background-color: var(--gray-light);
     border-top: 1px solid var(--gray-border);
     padding: 3rem 2rem;
@@ -88,6 +88,6 @@ footer {
     font-size: 0.9rem;
 }
 
-footer p {
+body > footer p {
     margin: 0;
 }

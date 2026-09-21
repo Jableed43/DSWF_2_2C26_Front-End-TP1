@@ -10,33 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header-footer.css">
 
-    <script src="js/script.js" defer></script>
-</head>
-<body>
-    <!-- Navegación principal -->
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">🏠 Inicio</a>
-                </li>
-                <li>
-                    <a href="#perfiles">👤 Perfiles</a>
-                </li>
-                <li>
-                    <a href="bitacora.html">📝 Bitácora</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto BlueTech - Home</title>
     <style>
         :root {
             --primary-blue: #0066cc;
@@ -60,14 +35,6 @@
             background-color: var(--white);
             color: var(--gray-dark);
             line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--white);
-            border-bottom: 1px solid var(--gray-border);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         .navbar {
@@ -258,6 +225,45 @@
             font-size: 0.9rem;
         }
 
+        .grid--perfiles {
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .card--perfil {
+            display: block;
+            padding: 1.5rem 0.75rem;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .card--perfil h3 {
+            margin: 1rem 0 0;
+            font-size: 1rem;
+        }
+
+        .card-avatar {
+            display: block;
+            width: 100%;
+            max-width: 120px;
+            aspect-ratio: 1 / 1;
+            margin: 0 auto;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 25%;
+        }
+
+        /* mientras no haya foto: circulo con la inicial */
+        .card-avatar--vacio {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
         /* Responsive design rules */
         @media (max-width: 768px) {
             .navbar {
@@ -280,6 +286,8 @@
             }
         }
     </style>
+
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -287,11 +295,13 @@
         <nav class="navbar">
             <div class="logo">Blue<span>Tech</span></div>
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#caracteristicas">Características</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#perfiles">Perfiles</a></li>
+                <li><a href="index.html#caracteristicas">Características</a></li>
+                <li><a href="bitacora.html">Bitácora</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
-            <a href="#empezar" class="btn-header">Acceder</a>
+            <a href="index.html#empezar" class="btn-header">Acceder</a>
         </nav>
     </header>
 
@@ -303,6 +313,32 @@
                 <a href="#explorar" class="btn-primary">Comenzar ahora</a>
                 <a href="#saber-mas" class="btn-secondary">Saber más</a>
             </div>
+        </div>
+    </section>
+
+    <section id="perfiles" class="features">
+        <h2 class="section-title">Conocé al equipo</h2>
+        <div class="grid grid--perfiles">
+                <a class="card card--perfil" href="perfil-1.html">
+                    <img class="card-avatar" src="img/maria/avatar.png" alt="" width="120" height="120">
+                    <h3>María Cristina Gutiérrez</h3>
+                </a>
+                <a class="card card--perfil" href="perfil-2.html">
+                    <img class="card-avatar" src="img/javier/avatar.png" alt="" width="120" height="120">
+                    <h3>Javier Nehuén López</h3>
+                </a>
+                <a class="card card--perfil" href="perfil-3.html">
+                    <div class="card-avatar card-avatar--vacio" aria-hidden="true">R</div>
+                    <h3>Rocío</h3>
+                </a>
+                <a class="card card--perfil" href="perfil-4.html">
+                    <div class="card-avatar card-avatar--vacio" aria-hidden="true">F</div>
+                    <h3>Facundo</h3>
+                </a>
+                <a class="card card--perfil" href="perfil-5.html">
+                    <img class="card-avatar" src="img/damian/avatar.jpg" alt="" width="120" height="120">
+                    <h3>Damián Gorosito</h3>
+                </a>
         </div>
     </section>
 
@@ -336,10 +372,6 @@
     <footer>
         <p>&copy; 2026 BlueTech Proyecto. Todos los derechos reservados.</p>
     </footer>
-
-</body>
-</html>
-
 
 </body>
 </html>
