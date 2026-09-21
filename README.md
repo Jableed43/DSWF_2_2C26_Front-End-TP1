@@ -40,8 +40,8 @@ Somos cinco. El sitio tiene una portada, un perfil individual por integrante, na
 │   ├── header-footer.css header y footer compartidos por todas las páginas
 │   └── perfil.css        estilos de los perfiles (carruseles, etiquetas, tarjetas)
 ├── js/
-│   ├── script.js         función de la página de María
 │   ├── home.js           función de la portada
+│   ├── maria.js          función del perfil de María
 │   ├── perfil.js         filtros, carruseles y tarjetas de los perfiles
 │   └── damian.js         script del perfil de Damián
 ├── img/                  avatares de cada integrante (una carpeta por persona) e íconos
@@ -86,7 +86,7 @@ Portada, header y footer:
 | Dónde | Archivo | Qué hace |
 |---|---|---|
 | Portada | `js/home.js` | El botón **Sorprendeme** elige un integrante al azar y abre su perfil. |
-| Perfil de María | `js/script.js` | El botón **Saludar** muestra un mensaje de saludo (`saludarMaria()`). |
+| Perfil de María | `js/maria.js` | El botón **Saludar** muestra un mensaje de saludo (`saludarMaria()`). |
 | Perfil de Javier | `js/perfil.js` | Filtro de habilidades por categoría, carruseles de películas y discos, y tarjetas que se dan vuelta al hacer clic. |
 | Perfiles con carrusel (María, Damián) | `js/perfil.js` | Carruseles de películas y discos con flechas y puntos. Al cambiar de slide se frena el video o el disco que estaba sonando. |
 | Perfil de Damián | `js/damian.js` | _Pendiente: su función propia._ |
