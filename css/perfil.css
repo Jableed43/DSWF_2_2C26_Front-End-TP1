@@ -73,6 +73,21 @@ body {
     text-decoration: underline;
 }
 
+.enlace-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.enlace-github::before {
+    content: "";
+    width: 1.1em;
+    height: 1.1em;
+    background-color: currentColor;
+    -webkit-mask: url("../img/icons/github.svg") center / contain no-repeat;
+    mask: url("../img/icons/github.svg") center / contain no-repeat;
+}
+
 .nombre-brillante {
     text-align: center;
     background-image: linear-gradient(
