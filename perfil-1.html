@@ -46,19 +46,23 @@
         <p class="sobre-mi-contacto">📍 Buenos Aires, Argentina &middot; 🎂 45 años</p>
       </section>
 
+      <h2 id="titulo-saludo">¡Hola!</h2>
+
+      <section class="sobre-mi" aria-labelledby="titulo-saludo">
+        <p class="sobre-mi-contacto">
+          <button type="button" class="btn btn-primary" onclick="saludarMaria()">Saludar</button>
+        </p>
+        <p id="mensaje-saludo"></p>
+      </section>
+
       <h2 id="titulo-habilidades">Habilidades</h2>
 
       <section class="skill-block" data-categoria="personales">
-        <div class="skill-fila">
-          <div class="skill-lista">
-            <h4>Fortalezas</h4>
-            <ul>
-              <li>Organizar</li>
-              <li>Cocinar</li>
-              <li>Proactiva</li>
-              <li>Paciente</li>
-            </ul>
-          </div>
+        <div class="skill-chip-grupo">
+          <span class="skill-chip">🗂️ Organización</span>
+          <span class="skill-chip">🍳 Cocina</span>
+          <span class="skill-chip">⚡ Proactividad</span>
+          <span class="skill-chip">🧘 Paciencia</span>
         </div>
       </section>
 
@@ -125,14 +129,6 @@
         <div class="carousel-puntos" id="carousel-puntos-discos"></div>
       </section>
 
-      <h2 id="titulo-saludo">¡Hola!</h2>
-
-      <section class="sobre-mi" aria-labelledby="titulo-saludo">
-        <p class="sobre-mi-contacto">
-          <button type="button" class="btn btn-primary" onclick="saludarMaria()">Saludar</button>
-        </p>
-        <p id="mensaje-saludo"></p>
-      </section>
     </main>
 
     <footer>
