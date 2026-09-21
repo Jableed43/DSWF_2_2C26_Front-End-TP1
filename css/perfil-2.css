@@ -19,7 +19,8 @@ body {
 #titulo-discos,
 #titulo-juegos,
 #titulo-sobre-mi {
-    color: var(--color-texto);
+    color: white;
+    background-color: #2563eb;
     text-align: center;
 }
 
