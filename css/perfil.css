@@ -689,7 +689,7 @@ body {
     font-weight: 700;
 }
 
-/* ===== Media queries de perfil-2 (breakpoints: 1200px / 900px / 400px) ===== */
+/* ===== Media queries de perfil (breakpoints: 1200px / 900px / 400px) ===== */
 
 @media (max-width: 1200px) {
     .skill-block,
