@@ -29,58 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// esfera de iconos con la cabeza en el medio
-document.addEventListener("DOMContentLoaded", () => {
-  const escena = document.querySelector(".sphere-scene");
-  const esfera = document.getElementById("skills-arena");
-  if (!escena || !esfera) return;
-
-  const items = Array.from(esfera.querySelectorAll(".skill-item"));
-  const total = items.length;
-  const anguloDorado = Math.PI * (3 - Math.sqrt(5)); // fibonacci sphere, reparte los puntos parejo
-
-  // el radio lo calculo en base al ancho real del contenedor y no con un
-  // numero fijo, asi la esfera achica bien en mobile (antes se salia
-  // del viewport en pantallas chicas)
-  const proporcionRadio = 352 / 840;
-
-  function posicionarEsfera() {
-    const radio = escena.clientWidth * proporcionRadio;
-
-    items.forEach((item, i) => {
-      const y = 1 - (i / (total - 1)) * 2;
-      const radioEnY = Math.sqrt(1 - y * y);
-      const theta = anguloDorado * i;
-
-      const x = Math.cos(theta) * radioEnY;
-      const z = Math.sin(theta) * radioEnY;
-
-      const posX = x * radio;
-      const posY = y * radio;
-      const posZ = z * radio;
-
-      const rotY = Math.atan2(x, z) * (180 / Math.PI);
-      const rotX = -Math.asin(y) * (180 / Math.PI);
-
-      item.style.transform =
-        `translate3d(${posX}px, ${posY}px, ${posZ}px) rotateY(${rotY}deg) rotateX(${rotX}deg)`;
-
-      // los iconos que quedan mas cerca de la camara (z positivo) se
-      // dibujan arriba de la cabeza, los del otro lado quedan atras
-      item.style.zIndex = Math.round(posZ);
-    });
-  }
-
-  posicionarEsfera();
-
-  // recalcula todo si cambia el tamaño de la ventana
-  let temporizadorResize = null;
-  window.addEventListener("resize", () => {
-    clearTimeout(temporizadorResize);
-    temporizadorResize = setTimeout(posicionarEsfera, 150);
-  });
-});
-
 // carousel de peliculas y discos (funciona para cualquier cantidad de carousels en la pagina)
 document.addEventListener("DOMContentLoaded", () => {
   const carouseles = document.querySelectorAll(".carousel");
