@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP1 - Desarrollo Web</title>
+    <title>BlueTech · TP1 Front End</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,20 +71,6 @@
 
         .nav-links a:hover {
             color: var(--primary-blue);
-        }
-
-        .btn-header {
-            background-color: var(--black);
-            color: var(--white);
-            padding: 0.5rem 1.2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.3s;
-        }
-
-        .btn-header:hover {
-            background-color: var(--primary-blue);
         }
 
         .hero {
@@ -264,6 +250,35 @@
             font-weight: 700;
         }
 
+        .section-sub {
+            text-align: center;
+            color: var(--gray-dark);
+            margin: -2rem 0 2.5rem;
+        }
+
+        .perfiles-accion {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        .perfiles-accion button {
+            border: 0;
+            cursor: pointer;
+            font: inherit;
+            font-weight: 600;
+        }
+
+        .perfiles-accion button:disabled {
+            opacity: 0.7;
+            cursor: default;
+        }
+
+        #mensaje-sorpresa {
+            margin-top: 1rem;
+            color: var(--gray-dark);
+            min-height: 1.6em;
+        }
+
         /* Responsive design rules */
         @media (max-width: 768px) {
             .navbar {
@@ -288,6 +303,7 @@
     </style>
 
     <script src="js/script.js" defer></script>
+    <script src="js/home.js" defer></script>
 </head>
 <body>
 
@@ -297,27 +313,25 @@
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#perfiles">Perfiles</a></li>
-                <li><a href="index.html#caracteristicas">Características</a></li>
                 <li><a href="bitacora.html">Bitácora</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
-            <a href="index.html#empezar" class="btn-header">Acceder</a>
         </nav>
     </header>
 
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Diseño minimalista y alta eficiencia para tus proyectos</h1>
-            <p>Una estructura moderna creada con CSS Grid y Flexbox. Totalmente responsive, optimizada y utilizando una paleta corporativa sofisticada.</p>
+            <h1>Somos BlueTech</h1>
+            <p>Somos cinco y este es nuestro primer TP de Desarrollo de Sistemas Web Front End. Acá cada uno se presenta, y en la bitácora contamos cómo lo fuimos armando.</p>
             <div class="hero-buttons">
-                <a href="#explorar" class="btn-primary">Comenzar ahora</a>
-                <a href="#saber-mas" class="btn-secondary">Saber más</a>
+                <a href="#perfiles" class="btn-primary">Conocé al equipo</a>
+                <a href="bitacora.html" class="btn-secondary">Leer la bitácora</a>
             </div>
         </div>
     </section>
 
     <section id="perfiles" class="features">
         <h2 class="section-title">Conocé al equipo</h2>
+        <p class="section-sub">Tocá una tarjeta para ver el perfil de cada uno.</p>
         <div class="grid grid--perfiles">
                 <a class="card card--perfil" href="perfil-1.html">
                     <img class="card-avatar" src="img/maria/avatar.png" alt="" width="120" height="120">
@@ -340,33 +354,37 @@
                     <h3>Damián Gorosito</h3>
                 </a>
         </div>
+        <div class="perfiles-accion">
+            <button type="button" id="btn-sorpresa" class="btn-primary">Sorprendeme</button>
+            <p id="mensaje-sorpresa" aria-live="polite"></p>
+        </div>
     </section>
 
-    <section id="caracteristicas" class="features">
-        <h2 class="section-title">¿Por qué elegir nuestra arquitectura?</h2>
+    <section id="como-lo-armamos" class="features">
+        <h2 class="section-title">Cómo lo armamos</h2>
         <div class="grid">
             <div class="card">
-                <div class="card-icon">✦</div>
-                <h3>Estructura Flexible</h3>
-                <p>Uso nativo de CSS variables para adaptar tonalidades azules, grises, negros y blancos con facilidad matemática.</p>
+                <div class="card-icon">🧩</div>
+                <h3>Una plantilla, cinco perfiles</h3>
+                <p>Todos los perfiles salen de la misma base, así se ven parejos y son fáciles de mantener.</p>
             </div>
             <div class="card">
-                <div class="card-icon">⚡</div>
-                <h3>Máximo Rendimiento</h3>
-                <p>Código limpio sin dependencias pesadas, garantizando una velocidad de carga óptima en cualquier pantalla.</p>
+                <div class="card-icon">🖱️</div>
+                <h3>Se ve bien en el celular</h3>
+                <p>Lo probamos en pantallas chicas, medianas y grandes para que nada se rompa.</p>
             </div>
             <div class="card">
                 <div class="card-icon">📱</div>
-                <h3>100% Adaptable</h3>
-                <p>Media queries integradas para asegurar una experiencia móvil, tablet y de escritorio fluida y consistente.</p>
+                <h3>Con algo de JavaScript</h3>
+                <p>Carruseles, filtros y hasta un botón para saludar: los perfiles se pueden tocar.</p>
             </div>
         </div>
     </section>
 
     <section class="cta-section">
-        <h2>¿Listo para transformar tu idea?</h2>
-        <p>Aprovecha esta plantilla base estructurada con las mejores prácticas de UI/UX contemporáneas.</p>
-        <a href="#unirse" class="btn-primary">Crear Cuenta</a>
+        <h2>¿Cómo fue el proceso?</h2>
+        <p>En la bitácora contamos qué decidimos, qué se nos trabó y cómo lo resolvimos.</p>
+        <a href="bitacora.html" class="btn-primary">Leer la bitácora</a>
     </section>
 
     <footer>
