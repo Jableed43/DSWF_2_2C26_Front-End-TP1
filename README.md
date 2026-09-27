@@ -2,7 +2,7 @@
 
 Proyecto web en equipo hecho con HTML, CSS y JavaScript para la materia **Desarrollo de Sistemas Web Front End** (comisión 2C26, 2026).
 
-Somos cinco. El sitio tiene una portada, un perfil individual por integrante, navegación entre todas las páginas y una bitácora donde contamos cómo lo fuimos armando.
+Somos cuatro. El sitio tiene una portada, un perfil individual por integrante, navegación entre todas las páginas y una bitácora donde contamos cómo lo fuimos armando.
 
 **Sitio publicado:** _pendiente (Vercel)_
 
@@ -10,11 +10,12 @@ Somos cinco. El sitio tiene una portada, un perfil individual por integrante, na
 
 | Integrante | Perfil | GitHub |
 |---|---|---|
-| María Cristina Gutiérrez | [perfil-1.html](perfil-1.html) | [mariaCristinaGutierrez](https://github.com/mariaCristinaGutierrez) |
 | Javier Nehuén López | [perfil-2.html](perfil-2.html) | [Jableed43](https://github.com/Jableed43) |
 | Rocío Ailen Arenas | [perfil-3.html](perfil-3.html) | [rocioailenar](https://github.com/rocioailenar) |
 | Facundo Sánchez | [perfil-4.html](perfil-4.html) | _pendiente_ |
 | Damián Gorosito | [perfil-5.html](perfil-5.html) | [damiangorosito](https://github.com/damiangorosito) |
+
+> María Cristina Gutiérrez formó parte del equipo hasta el 22 de septiembre de 2026. Ver la nota en **Cambios en el equipo**, más abajo.
 
 ## Tecnologías
 
@@ -29,7 +30,6 @@ Somos cinco. El sitio tiene una portada, un perfil individual por integrante, na
 ```
 ├── index.html            portada: presenta al equipo y lista los perfiles
 ├── bitacora.html         bitácora del proceso
-├── perfil-1.html         María Cristina
 ├── perfil-2.html         Javier
 ├── perfil-3.html         Rocío (en construcción)
 ├── perfil-4.html         Facundo (en construcción)
@@ -41,7 +41,6 @@ Somos cinco. El sitio tiene una portada, un perfil individual por integrante, na
 │   └── perfil.css        estilos de los perfiles (carruseles, etiquetas, tarjetas)
 ├── js/
 │   ├── home.js           función de la portada
-│   ├── maria.js          función del perfil de María
 │   ├── perfil.js         filtros, carruseles y tarjetas de los perfiles
 │   └── damian.js         script del perfil de Damián
 ├── img/                  avatares de cada integrante (una carpeta por persona) e íconos
@@ -86,9 +85,8 @@ Portada, header y footer:
 | Dónde | Archivo | Qué hace |
 |---|---|---|
 | Portada | `js/home.js` | El botón **Sorprendeme** elige un integrante al azar y abre su perfil. |
-| Perfil de María | `js/maria.js` | El botón **Saludar** muestra un mensaje de saludo (`saludarMaria()`). |
 | Perfil de Javier | `js/perfil.js` | Filtro de habilidades por categoría, carruseles de películas y discos, y tarjetas que se dan vuelta al hacer clic. |
-| Perfiles con carrusel (María, Damián) | `js/perfil.js` | Carruseles de películas y discos con flechas y puntos. Al cambiar de slide se frena el video o el disco que estaba sonando. |
+| Perfiles con carrusel (Damián) | `js/perfil.js` | Carruseles de películas y discos con flechas y puntos. Al cambiar de slide se frena el video o el disco que estaba sonando. |
 | Perfil de Damián | `js/damian.js` | _Pendiente: su función propia._ |
 
 ## Cómo verlo en local
@@ -100,6 +98,14 @@ python -m http.server 8000
 ```
 
 y entrar a `http://localhost:8000`.
+
+## Cambios en el equipo
+
+**María Cristina Gutiérrez** dejó el equipo el martes 22 de septiembre de 2026. Su mensaje al grupo:
+
+> Hola, les aviso que finalmente me aprobaron la equivalencia, por lo que no voy a continuar cursando esta materia ni con el TP1 actual.
+
+Por eso su perfil (`perfil-1.html`) ya no forma parte del sitio publicado. Su trabajo sigue disponible en el historial del repositorio.
 
 ## Uso de IA
 
