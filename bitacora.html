@@ -3,202 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora - TP1</title>
-
+    <title>Bitácora de Desarrollo · BlueTech</title>
+    <!-- Google Fonts Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <!-- Hojas de estilo del proyecto -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header-footer.css">
-
+    <link rel="stylesheet" href="css/perfil.css">
 </head>
 <body>
-    <!-- Navegación principal -->
-    <header>
-      <nav class="navbar">
-        <div class="logo">Blue<span>Tech</span></div>
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="index.html#perfiles">Perfiles</a></li>
-          <li><a href="bitacora.html">Bitácora</a></li>
-        </ul>
-      </nav>
+
+    <!-- Encabezado y Navegación Principal -->
+    <header class="header-principal">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html"><strong>BlueTech</strong></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="bitacora.html" class="active">Bitácora</a></li>
+                <li class="dropdown">
+                    <a href="#">Integrantes ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="perfil-2.html">Javier López</a></li>
+                        <li><a href="perfil-3.html">Rocío Arenas</a></li>
+                        <li><a href="perfil-4.html">Facundo Sánchez</a></li>
+                        <li><a href="perfil-5.html">Damián Gorosito</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
-    
+
+    <!-- Contenido Principal de la Bitácora -->
     <main>
 
-        <!-- Presentación de la bitácora -->
+        <!-- Presentación de la Bitácora -->
         <section class="presentacion-bitacora">
-
             <h1>Bitácora del proyecto</h1>
-
             <p>
                 En esta sección registramos el proceso de desarrollo del
                 Trabajo Práctico 1, las decisiones tomadas por el equipo,
                 las dificultades encontradas y los cambios realizados
                 durante la construcción del sitio web.
             </p>
-
         </section>
-
 
         <!-- Entrada 1 -->
         <section class="entrada-bitacora">
-
             <article class="tarjeta-bitacora">
-
                 <header>
-                    <h2>Inicio del proyecto</h2>
-                    <p>
-                        <strong>Fecha:</strong> Agosto de 2026
-                    </p>
+                    <h2>Planificación inicial y asignación de roles</h2>
+                    <p><strong>Fecha:</strong> 6 de septiembre de 2026</p>
                 </header>
-
                 <div class="contenido-bitacora">
-
                     <h3>¿Qué hicimos?</h3>
-
                     <p>
-                        Creamos el repositorio del proyecto y establecimos
-                        la estructura inicial de carpetas y archivos.
+                        Analizamos los requerimientos del TP1 y coordinamos la primera reunión oficial
+                        del equipo para distribuir componentes e implementar un flujo de trabajo transparente.
                     </p>
-
                     <h3>Decisiones tomadas</h3>
-
                     <ul>
-                        <li>Utilizar HTML, CSS y JavaScript.</li>
-                        <li>Separar los archivos HTML, CSS y JavaScript.</li>
-                        <li>Utilizar una carpeta <code>img</code> para las imágenes.</li>
-                        <li>Utilizar Google Fonts para la tipografía.</li>
-                        <li>Trabajar mediante ramas de Git para evitar modificar directamente 
-                            la rama principal.</li>
+                        <li>Asignación de componentes: Damián (Footer y documentación), Javier (Template de perfiles), Rocío (Header de portada y perfiles), Facundo (Bitácora) y María Cristina (Portada Home).</li>
+                        <li>Establecimiento de revisores (reviewers) cruzados para la revisión de código previa a cada integración.</li>
+                        <li>Adopción de la tipografía <code>Poppins</code> mediante Google Fonts y definición de una paleta cromática provisional.</li>
                     </ul>
-
                     <h3>Dificultades</h3>
-
                     <p>
-                        Uno de los primeros desafíos fue organizar el
-                        repositorio y establecer una forma de trabajo
-                        colaborativa que permitiera que cada integrante
-                        desarrollara su parte sin sobrescribir el trabajo
-                        de los demás.
+                        Coordinar una línea estética común que permitiera a cada integrante mantener su libertad creativa en el perfil individual sin romper la identidad visual del grupo.
                     </p>
-
                 </div>
-
             </article>
-
         </section>
-
 
         <!-- Entrada 2 -->
         <section class="entrada-bitacora">
-
             <article class="tarjeta-bitacora">
-
                 <header>
-                    <h2>Desarrollo del perfil individual</h2>
-                    <p>
-                        <strong>Fecha:</strong> Agosto de 2026
-                    </p>
+                    <h2>Estructuración del repositorio y arquitectura CSS</h2>
+                    <p><strong>Fecha:</strong> 12 a 15 de septiembre de 2026</p>
                 </header>
-
                 <div class="contenido-bitacora">
-
                     <h3>¿Qué hicimos?</h3>
-
                     <p>
-                        Cada integrante comenzó el desarrollo de su perfil individual dentro del
-                        proyecto. Para trabajar de manera independiente, creamos las ramas
-                        <code>feature/perfil-[nombre]</code> y agregamos nuestros avatares en la
-                        carpeta destinada a las imágenes.
+                        Creamos el repositorio público e independiente en GitHub con ramas individuales por integrante y organizamos la estructura modular del proyecto.
                     </p>
-
-                    <p>
-                        Luego desarrollamos el archivo correspondiente a cada perfil,
-                        incorporando los datos personales, habilidades, películas favoritas
-                        y discos favoritos, siguiendo los requisitos de la consigna.
-                    </p>
-
                     <h3>Decisiones tomadas</h3>
-
                     <ul>
-                        <li>Trabajar el perfil individual en una rama propia.</li>
-                        <li>Utilizar el archivo <code>js/script.js</code> para las funciones dinámicas.</li>
-                        <li>Utilizar el avatar almacenado dentro de la carpeta <code>img</code>.</li>
+                        <li>Modularización de estilos CSS: <code>css/style.css</code> para variables globales, <code>css/header-footer.css</code> para componentes compartidos y <code>css/perfil.css</code> para componentes multimedia.</li>
+                        <li>Inclusión de las pautas de diseño y minutas en la carpeta <code>/context/</code> para fácil consulta del equipo.</li>
+                        <li>Depuración del repositorio eliminando componentes y recursos de prueba obsoletos sin uso en el sitio.</li>
                     </ul>
-
                     <h3>Dificultades</h3>
-
                     <p>
-                        Fue necesario familiarizarse con el flujo de trabajo mediante
-                        ramas en Git y GitHub Desktop, especialmente para mantener los
-                        cambios separados de la rama principal y poder incorporarlos
-                        posteriormente mediante un Pull Request.
+                        Evitar colisiones y solapamientos en las reglas de estilo globales al trabajar simultáneamente en componentes compartidos.
                     </p>
-
                 </div>
-
             </article>
-
         </section>
 
         <!-- Entrada 3 -->
         <section class="entrada-bitacora">
-
             <article class="tarjeta-bitacora">
-
                 <header>
-                    <h2>Incorporación de función dinámica al perfil</h2>
-                    <p>
-                        <strong>Fecha:</strong> Septiembre de 2026
-                    </p>
+                    <h2>Desarrollo de interacciones dinámicas en JavaScript</h2>
+                    <p><strong>Fecha:</strong> 18 a 20 de septiembre de 2026</p>
                 </header>
-
                 <div class="contenido-bitacora">
-
                     <h3>¿Qué hicimos?</h3>
-
                     <p>
-                        Incorporé una función dinámica mediante JavaScript en mi
-                        perfil individual. Se agregó un botón de saludo que muestra
-                        un mensaje personalizado al ser presionado.
+                        Programamos las funciones de interacción en JavaScript Vanilla requeridas para la portada y las secciones de perfil.
                     </p>
-
                     <h3>Decisiones tomadas</h3>
-
                     <ul>
-                        <li>
-                            Utilizar un botón para activar la función dinámica.
-                        </li>
-                        <li>
-                            Mantener la función JavaScript en el archivo
-                            <code>js/script.js</code>.
-                        </li>
-                        <li>
-                            Mostrar el resultado directamente dentro de la página.
-                        </li>
+                        <li>Lógica del botón <strong>"Sorprendeme"</strong> en <code>js/home.js</code> para redirigir a un perfil aleatorio del equipo.</li>
+                        <li>Filtros por categorías de habilidades, tarjetas interactivas giratorias (<em>flip</em>) y carruseles multimedia en <code>js/perfil.js</code>.</li>
+                        <li>Desacoplamiento de scripts generales moviendo la lógica específica a archivos dedicados como <code>js/damian.js</code>.</li>
                     </ul>
-
                     <h3>Dificultades</h3>
-
                     <p>
-                        Fue necesario comprobar la comunicación entre el HTML y el
-                        archivo JavaScript externo y verificar que la función se
-                        ejecutara correctamente al presionar el botón.
+                        Garantizar que al cambiar de diapositiva en los carruseles de películas y discos se pausara automáticamente la reproducción activa de audio o video.
                     </p>
-
                 </div>
-
             </article>
+        </section>
 
+        <!-- Entrada 4 -->
+        <section class="entrada-bitacora">
+            <article class="tarjeta-bitacora">
+                <header>
+                    <h2>Reorganización del equipo por cambio de integrantes</h2>
+                    <p><strong>Fecha:</strong> 22 de septiembre de 2026</p>
+                </header>
+                <div class="contenido-bitacora">
+                    <h3>¿Qué hicimos?</h3>
+                    <p>
+                        Gestionamos la salida de María Cristina Gutiérrez tras notificarnos la aprobación de su equivalencia académica.
+                    </p>
+                    <h3>Decisiones tomadas</h3>
+                    <ul>
+                        <li>Retiro de su página individual (<code>perfil-1.html</code>) de la navegación del sitio publicado.</li>
+                        <li>Conservación de sus contribuciones previas en el historial de commits del repositorio Git para mantener la transparencia.</li>
+                        <li>Reasignación del ajuste final de la portada entre los integrantes activos sin demorar el cronograma de entrega.</li>
+                    </ul>
+                    <h3>Dificultades</h3>
+                    <p>
+                        Reestructurar los enlaces internos del menú desplegable y de la portada garantizando que ningún enlace quedara roto.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Entrada 5 -->
+        <section class="entrada-bitacora">
+            <article class="tarjeta-bitacora">
+                <header>
+                    <h2>Pruebas responsivas y preparación de entrega</h2>
+                    <p><strong>Fecha:</strong> 25 a 27 de septiembre de 2026</p>
+                </header>
+                <div class="contenido-bitacora">
+                    <h3>¿Qué hicimos?</h3>
+                    <p>
+                        Sometimos el sitio a pruebas de maquetación adaptable en múltiples resoluciones y auditamos la navegación interna.
+                    </p>
+                    <h3>Decisiones tomadas</h3>
+                    <ul>
+                        <li>Verificación de las <em>media queries</em> en los tres breakpoints obligatorios: <strong>400 px</strong>, <strong>900 px</strong> y <strong>1200 px</strong> sin desbordes de contenido.</li>
+                        <li>Asegurar la navegación completa mediante botones y menús para no depender del botón "Atrás" del navegador.</li>
+                        <li>Finalización de la documentación técnica en el <code>README.md</code> y preparación del entorno de despliegue en Vercel.</li>
+                    </ul>
+                    <h3>Dificultades</h3>
+                    <p>
+                        Ajustar la grilla responsiva de las tarjetas y la visibilidad de los controles de carrusel en la vista móvil de 400 px.
+                    </p>
+                </div>
+            </article>
         </section>
 
     </main>
 
-    <footer>
-      <p>&copy; 2026 BlueTech Proyecto. Todos los derechos reservados.</p>
+    <!-- Pie de página -->
+    <footer class="footer-principal">
+        <p>&copy; 2026 BlueTech · Desarrollo de Sistemas Web Front End (Comisión 2C26).</p>
     </footer>
 
 </body>
