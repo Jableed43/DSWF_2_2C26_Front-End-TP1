@@ -3,76 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - Damián Gorosito</title>
+    <title>Perfil - Facundo Sánchez</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/header-footer.css">
 
-    <script src="js/script.js" defer></script>
 </head>
 <body>
-
     <header>
-        <nav>
-            <a href="index.html">← Volver al inicio</a>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">Blue<span>Tech</span></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#perfiles">Perfiles</a></li>
+          <li><a href="bitacora.html">Bitácora</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="contenedor-perfil">
-        <!-- Tarjeta Principal -->
-        <article class="tarjeta-perfil">
-            
-            <!-- Foto o Avatar -->
-            <div class="foto-perfil">
-                <img src="img/perfil-damian.jpg" alt="Foto de Damián Gorosito" width="100">
-            </div>
+    <main>
+      <h1 class="nombre-brillante">Facundo Sánchez</h1>
 
-            <!-- Datos Personales Principales -->
-            <section class="encabezado-perfil">
-                <h1>Damián Gorosito</h1>
-                <p class="datos-basicos">📍 Buenos Aires, Argentina | 🎂 35 años</p>
-            </section>
+      <h2 id="titulo-sobre-mi">Sobre mí</h2>
 
-            <!-- Sección de Habilidades (4 requeridas) -->
-            <section class="seccion-info">
-                <h2>Habilidades</h2>
-                <ul class="lista-habilidades">
-                    <li>Python</li>
-                    <li>HTML5 & CSS3</li>
-                    <li>Lógica de programación</li>
-                    <li>Resolución de problemas</li>
-                </ul>
-            </section>
-
-            <!-- Sección de Películas Favoritas (3 requeridas) -->
-            <section class="seccion-info">
-                <h2>Películas Favoritas</h2>
-                <ol class="lista-favoritos">
-                    <li>El Señor de los Anillos</li>
-                    <li>El Gran Pez</li>
-                    <li>Pulp Fiction</li>
-                </ol>
-            </section>
-
-            <!-- Sección de Discos Favoritos (3 requeridos) -->
-            <section class="seccion-info">
-                <h2>Discos Favoritos</h2>
-                <ol class="lista-favoritos">
-                    <li>Creo - Callejeros</li>
-                    <li>Feed the Machine - Poor man's Poison</li>
-                    <li>Luzbelito - Patricio Rey y sus Redonditos de Ricota</li>
-                </ol>
-            </section>
-
-        </article>
+      <section class="sobre-mi" aria-labelledby="titulo-sobre-mi">
+        <p class="sobre-mi-contacto"><span class="enlace-github" title="GitHub pendiente">GitHub</span></p>
+        <p>Perfil en construcción.</p>
+      </section>
     </main>
 
     <footer>
-        <p>Trabajo Práctico 1 — Front End 2026</p>
+      <p>&copy; 2026 BlueTech Proyecto. Todos los derechos reservados.</p>
     </footer>
-
 </body>
 </html>

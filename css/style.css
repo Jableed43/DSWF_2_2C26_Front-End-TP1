@@ -1,19 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* ==========================================================================
+   Variables de Diseño - Paleta y Tipografía (Ref: context.md)
+   ========================================================================== */
 :root {
-    --primary-blue: #0066cc;
-    --dark-blue: #004499;
-    --light-blue: #e6f0fa;
-    --white: #ffffff;
-    --black: #111111;
-    --gray-dark: #333333;
-    --gray-light: #f4f4f6;
-    --gray-border: #dddddd;
+  --font-family-base: 'Poppins', sans-serif;
+  --line-height-base: 1.55;
+
+  --color-primary: #2563EB;
+  --color-secondary: #0F172A;
+
+  --color-background: #F1F5F9;
+  --color-surface: #FFFFFF;
+
+  --color-border: #E2E8F0;
+  --color-text-secondary: #64748B;
+
+  /* Compatibility aliases for existing code in other files */
+  --white: var(--color-surface);
+  --gray-dark: var(--color-secondary);
+  --gray-light: #f4f4f6;
+  --gray-border: var(--color-border);
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-base);
 }
 
 body {
