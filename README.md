@@ -4,7 +4,7 @@ Proyecto web en equipo hecho con HTML, CSS y JavaScript para la materia **Desarr
 
 Somos cuatro. El sitio tiene una portada, un perfil individual por integrante, navegación entre todas las páginas y una bitácora donde contamos cómo lo fuimos armando.
 
-**Sitio publicado:** _pendiente (Vercel)_
+**Sitio publicado:** [_pendiente (Vercel)_](https://frontendtp1eq25.vercel.app/)
 
 ## Integrantes
 
@@ -107,10 +107,20 @@ y entrar a `http://localhost:8000`.
 
 Por eso su perfil (`perfil-1.html`) ya no forma parte del sitio publicado. Su trabajo sigue disponible en el historial del repositorio.
 
-## Uso de IA
+## Uso de IA y Criterio de Autoría
 
-_A completar por el equipo:_ herramientas y modelos usados, en qué partes del código, diseño o contenido ayudaron, si fueron planes gratuitos o pagos, y qué se revisó y cambió con criterio propio.
+En cumplimiento con el requisito transversal establecido en la consigna del TP1 [1]:
 
+* **Herramientas y Modelos Utilizados:** Se consultaron modelos de lenguaje (como ChatGPT, Claude y Gemini) como asistentes técnicos de desarrollo, resolución de dudas conceptuales y apoyo en la redacción de documentación [1, 2].
+* **Ámbitos de Asistencia y Depuración (Debugging):**
+  * **Estructura y CSS:** Consultas sobre maquetación semántica en HTML5 y optimización de layouts responsivos con CSS Grid y Flexbox [1-3].
+  * **JavaScript Vanilla:** Asistencia en la revisión de sintaxis, depuración de errores en la consola del navegador y soporte en la lógica de interacciones dinámicas (como la rotación de tarjetas y el manejo de los carruseles) [1, 2, 4].
+  * **Documentación:** Apoyo en la organización y formateo en Markdown del archivo `README.md` [1].
+* **Planes y Experiencia Previa del Equipo:** Las herramientas se utilizaron mediante **planes gratuitos** [1]. El equipo contaba con conocimientos previos de maquetación y programación, por lo que la IA se empleó como un complemento para acelerar la resolución de bloqueos puntuales [1, 2].
+* **Generación de Imágenes e Ilustraciones:** **No se utilizaron herramientas de IA para la creación de imágenes, logotipos ni avatares.** Todos los recursos visuales del sitio corresponden a fotografías/avatares propios de los integrantes y los íconos técnicos provienen directamente de fuentes vectoriales y la CDN de Devicon [1, 3, 5].
+* **Revisión y Control Humano:** Cada sugerencia de código generada por IA fue probada, modificada y adaptada activamente por los integrantes del equipo antes de integrarse al repositorio grupal [1, 2]. Se aseguró la comprensión completa del código fuente para mantener la autoría y la responsabilidad técnica del proyecto [2].
+
+```
 ## Pendientes
 
 - Capturas de pantalla de la portada y de cada perfil.
