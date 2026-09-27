@@ -4,7 +4,7 @@ Proyecto web en equipo hecho con HTML, CSS y JavaScript para la materia **Desarr
 
 Somos cuatro. El sitio tiene una portada, un perfil individual por integrante, navegación entre todas las páginas y una bitácora donde contamos cómo lo fuimos armando.
 
-**Sitio publicado:** [_pendiente (Vercel)_](https://frontendtp1eq25.vercel.app/)
+**Sitio publicado:** https://frontendtp1eq25.vercel.app/
 
 ## Integrantes
 
