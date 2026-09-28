@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Damián Gorosito · BlueTech</title>
+
     <!-- Google Fonts Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Devicon CDN para íconos de tecnologías -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicon/devicon@latest/devicon.min.css">
+
     <!-- Hojas de estilo del proyecto -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header-footer.css">
@@ -18,8 +21,8 @@
 <body>
 
     <!-- Encabezado y Navegación Principal -->
-    <header>
-        <nav>
+    <header class="site-header">
+        <nav class="nav-container">
             <div class="logo">
                 <a href="index.html"><strong>BlueTech</strong></a>
             </div>
@@ -44,109 +47,125 @@
     </header>
 
     <!-- Contenido Principal -->
-    <main>
+    <main class="perfil-main">
 
-        <!-- Sección Sobre Mí -->
-        <section id="sobre-mi" class="perfil-header">
-            <div class="avatar-container">
-                <img src="img/damian/avatar.png" alt="Avatar de Damián Gorosito" id="avatar-damian">
+        <!-- Sección Sobre Mí / Cabecera de Perfil -->
+        <section id="sobre-mi" class="perfil-hero">
+            <div class="perfil-avatar-container">
+                <img src="img/damian/avatar.png" alt="Avatar de Damián Gorosito" class="avatar" id="avatar-damian">
             </div>
-            <div class="perfil-datos">
+            <div class="perfil-bio">
                 <h1>Damián Gorosito</h1>
-                <p class="subtitulo">Desarrollador Front End & Redactor Técnico</p>
-                <ul class="info-list">
+                <p class="rol">Desarrollador Front End & Redactor Técnico</p>
+                <ul class="datos-personales">
                     <li>📍 <strong>Ciudad:</strong> Buenos Aires, Argentina</li>
                     <li>🎂 <strong>Edad:</strong> 24 años</li>
-                    <li>💻 <strong>GitHub:</strong> <a href="https://github.com/damiangorosito" target="_blank">@damiangorosito</a></li>
+                    <li>💻 <strong>GitHub:</strong> <a href="https://github.com/damiangorosito" target="_blank" rel="noopener">@damiangorosito</a></li>
                 </ul>
 
-                <!-- Contenedor para la función interactiva de JS -->
-                <div class="interaccion-contenedor" style="margin-top: 20px;">
-                    <button id="btn-animar-damian" class="btn-primario">⚡ ¡Saludar e iluminar perfil!</button>
+                <!-- Bloque para la función propia de JS (js/damian.js) -->
+                <div class="interaccion-accion">
+                    <button id="btn-animar-damian" class="btn-interactivo">⚡ ¡Saludar e iluminar perfil!</button>
                     <p id="mensaje-animado" class="mensaje-dinamico"></p>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Habilidades -->
+        <!-- Sección Habilidades (4 Mínimo según consigna) -->
         <section id="habilidades" class="seccion-perfil">
             <h2>Habilidades Técnicas</h2>
             <div class="skills-grid">
-                <div class="skill-card">
+                <article class="skill-card">
                     <i class="devicon-html5-plain colored"></i>
                     <h3>HTML5</h3>
-                    <p>Estructuración semántica de maquetas web.</p>
-                </div>
-                <div class="skill-card">
+                    <p>Estructuración semántica y maquetación web.</p>
+                </article>
+                <article class="skill-card">
                     <i class="devicon-css3-plain colored"></i>
                     <h3>CSS3 & Layouts</h3>
                     <p>Diseño adaptable con CSS Grid y Flexbox.</p>
-                </div>
-                <div class="skill-card">
+                </article>
+                <article class="skill-card">
                     <i class="devicon-javascript-plain colored"></i>
                     <h3>JavaScript</h3>
-                    <p>Lógica dinámica e interacciones nativas.</p>
-                </div>
-                <div class="skill-card">
+                    <p>Lógica dinámica e interacciones en el navegador.</p>
+                </article>
+                <article class="skill-card">
                     <i class="devicon-git-plain colored"></i>
                     <h3>Git & GitHub</h3>
-                    <p>Control de versiones colaborativo.</p>
+                    <p>Control de versiones colaborativo y gestión de ramas.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Películas Favoritas (3 Mínimo según consigna) -->
+        <section id="cine" class="seccion-perfil">
+            <h2>Películas Favoritas 🎬</h2>
+            <div class="carrusel-media" id="carrusel-peliculas">
+                <div class="cards-grid">
+                    <article class="media-card">
+                        <img src="img/damian/peli1.jpg" alt="Interstellar">
+                        <div class="media-info">
+                            <h3>Interstellar</h3>
+                            <p>Ciencia ficción dirigida por Christopher Nolan.</p>
+                        </div>
+                    </article>
+                    <article class="media-card">
+                        <img src="img/damian/peli2.jpg" alt="Matrix">
+                        <div class="media-info">
+                            <h3>Matrix</h3>
+                            <p>Clásico del cine de cibernética de las hermanas Wachowski.</p>
+                        </div>
+                    </article>
+                    <article class="media-card">
+                        <img src="img/damian/peli3.jpg" alt="El Club de la Pelea">
+                        <div class="media-info">
+                            <h3>El Club de la Pelea</h3>
+                            <p>Drama psicológico dirigido por David Fincher.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Películas Favoritas -->
-        <section id="cine" class="seccion-perfil">
-            <h2>Películas Favoritas 🎬</h2>
-            <div class="media-grid">
-                <article class="media-card">
-                    <img src="img/damian/peli1.jpg" alt="Interstellar">
-                    <h3>Interstellar</h3>
-                    <p>Ciencia ficción dirigida por Christopher Nolan.</p>
-                </article>
-                <article class="media-card">
-                    <img src="img/damian/peli2.jpg" alt="Matrix">
-                    <h3>Matrix</h3>
-                    <p>Clásico del cine de acción y cibernética.</p>
-                </article>
-                <article class="media-card">
-                    <img src="img/damian/peli3.jpg" alt="El Club de la Pelea">
-                    <h3>El Club de la Pelea</h3>
-                    <p>Drama psicológico dirigido por David Fincher.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Sección de Discos Favoritos -->
+        <!-- Sección Discos Favoritos (3 Mínimo según consigna) -->
         <section id="musica" class="seccion-perfil">
             <h2>Discos Favoritos 🎵</h2>
-            <div class="media-grid">
-                <article class="media-card">
-                    <img src="img/damian/disco1.jpg" alt="Random Access Memories">
-                    <h3>Random Access Memories</h3>
-                    <p><strong>Daft Punk</strong> (2013)</p>
-                </article>
-                <article class="media-card">
-                    <img src="img/damian/disco2.jpg" alt="The Dark Side of the Moon">
-                    <h3>The Dark Side of the Moon</h3>
-                    <p><strong>Pink Floyd</strong> (1973)</p>
-                </article>
-                <article class="media-card">
-                    <img src="img/damian/disco3.jpg" alt="Oktubre">
-                    <h3>Oktubre</h3>
-                    <p><strong>Patricio Rey y sus Redonditos de Ricota</strong> (1986)</p>
-                </article>
+            <div class="carrusel-media" id="carrusel-discos">
+                <div class="cards-grid">
+                    <article class="media-card">
+                        <img src="img/damian/disco1.jpg" alt="Random Access Memories">
+                        <div class="media-info">
+                            <h3>Random Access Memories</h3>
+                            <p><strong>Daft Punk</strong> (2013)</p>
+                        </div>
+                    </article>
+                    <article class="media-card">
+                        <img src="img/damian/disco2.jpg" alt="The Dark Side of the Moon">
+                        <div class="media-info">
+                            <h3>The Dark Side of the Moon</h3>
+                            <p><strong>Pink Floyd</strong> (1973)</p>
+                        </div>
+                    </article>
+                    <article class="media-card">
+                        <img src="img/damian/disco3.jpg" alt="Oktubre">
+                        <div class="media-info">
+                            <h3>Oktubre</h3>
+                            <p><strong>Patricio Rey y sus Redonditos de Ricota</strong> (1986)</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
     </main>
 
     <!-- Pie de Página -->
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2026 BlueTech · Desarrollo de Sistemas Web Front End (Comisión 2C26).</p>
     </footer>
 
-    <!-- Scripts de JavaScript -->
+    <!-- Carga de Scripts del Proyecto -->
     <script src="js/perfil.js"></script>
     <script src="js/damian.js"></script>
 </body>
