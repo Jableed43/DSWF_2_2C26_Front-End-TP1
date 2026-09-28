@@ -104,6 +104,37 @@ python -m http.server 8000
 
 y entrar a `http://localhost:8000`.
 
+## Capturas de pantalla
+
+**Portada**
+
+![Portada del sitio](img/capturas/home.png)
+
+**Perfiles**
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="img/capturas/perfil_javier.png" width="260"><br>
+      Javier
+    </td>
+    <td align="center">
+      <img src="img/capturas/perfil_rocio.png" width="260"><br>
+      Rocío
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="img/capturas/perfil_facundo.png" width="260"><br>
+      Facundo
+    </td>
+    <td align="center">
+      <img src="img/capturas/perfil_goro.png" width="260"><br>
+      Damián
+    </td>
+  </tr>
+</table>
+
 ## Cambios en el equipo
 
 **María Cristina Gutiérrez** dejó el equipo el martes 22 de septiembre de 2026. Su mensaje al grupo:
@@ -122,9 +153,3 @@ En cumplimiento con el requisito transversal establecido en la consigna del TP1:
   * **Documentación:** ayuda para ordenar y dar formato en Markdown al `README.md`.
 * **Imágenes:** no se usó IA para generar imágenes, logos ni avatares. Todos los recursos visuales son fotografías o avatares propios de los integrantes, y los íconos técnicos vienen directamente de la CDN de Devicon.
 * **Revisión humana:** cada sugerencia se probó, se modificó y se entendió por completo antes de sumarla al repositorio. Las decisiones de diseño y la responsabilidad técnica del proyecto son del equipo.
-
-## Pendientes
-
-- Capturas de pantalla de la portada y de cada perfil.
-- GitHub de Facundo.
-- Función dinámica propia en los perfiles de Rocío, Facundo y Damián (hoy comparten el filtro y el carrusel generales).
