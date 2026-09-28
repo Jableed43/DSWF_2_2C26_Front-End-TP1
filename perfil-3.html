@@ -1,10 +1,5 @@
 <!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - Rocío Ailen Arenas</title>
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,13 +30,13 @@
         </ul>
       </nav>
     </header>
+
     <main>
       <h1 class="nombre-brillante">Rocío Ailen Arenas</h1>
 
       <img class="avatar-perfil" src="img/rocio/avatar.PNG" alt="Foto de Rocío Ailen Arenas" width="160" height="160">
 
       <div class="tecnologias-base" style="display: flex; gap: 1.5rem; justify-content: center; margin: 2rem 0; flex-wrap: wrap; list-style: none;">
-        <!-- Iconos base (Ejemplo usando Devicon, puedes usar los tuyos) -->
         <i class="devicon-javascript-plain colored" style="font-size: 3rem;" title="JavaScript"></i>
         <i class="devicon-html5-plain colored" style="font-size: 3rem;" title="HTML5"></i>
         <i class="devicon-css3-plain colored" style="font-size: 3rem;" title="CSS3"></i>
@@ -52,11 +47,11 @@
       <h2 id="titulo-sobre-mi">Sobre mí</h2>
 
       <section class="sobre-mi" aria-labelledby="titulo-sobre-mi">
-        <p class="sobre-mi-contacto" style="display: flex; gap: 1rem; justify-content: center; align-items: center; font-size: 1.2rem;">
+        <p class="sobre-mi-contacto" style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap; font-size: 1.2rem;">
           <span style="font-size: 1rem;">📍 Buenos Aires, Argentina</span>
-          <span style="font-size: 1rem;">✉️ rourocio@gmail.com </span>
-          <a href="https://github.com/rocioailenar" title= "GitHub"> GitHub😾 </a>
-          <a href="https://landing-personal-sable.vercel.app/" target="_blank" rel="noopener" title="Portfolio"> Portfolio🌐</a>
+          <span style="font-size: 1rem;">✉️ rourocio@gmail.com</span>
+          <a class="enlace-github" href="https://github.com/rocioailenar" title="GitHub">GitHub</a>
+          <a href="https://landing-personal-sable.vercel.app/" target="_blank" rel="noopener" title="Portfolio">Portfolio 🌐</a>
         </p>
 
         <h3>Resumen Profesional</h3>
@@ -71,44 +66,42 @@
       <h2 id="titulo-habilidades">Habilidades</h2>
 
       <ul class="filtros" id="filtros-habilidades">
-        <li data-filtro="categoria1" class="activo"> Desarrollo</li>
-        <li data-filtro="categoria2">Ciberseguridad</li>
+        <li data-filtro="desarrollo" class="activo">Desarrollo</li>
+        <li data-filtro="ciberseguridad">Ciberseguridad</li>
       </ul>
 
-      <section class="skill-block" data-categoria="categoria1">
-        <h3>Developer SSR </h3>
+      <section class="skill-block" data-categoria="desarrollo">
+        <h3>Software Developer FullStack</h3>
         <div class="skill-fila">
-          <div class="skill-visual" style="width:260px; height:220px; background:var(--color-border); display:flex; align-items:center; justify-content:center; border-radius:12px;">
-              <img src="img/rocio/programacion.jpg" alt="Pantalla con código de programación" style="width:100%; height:100%; object-fit:cover;">
-            <span style="color:var(--color-text-secondary);"></span>
+          <div class="skill-visual" style="width:260px; height:220px; border-radius:12px; overflow:hidden;">
+            <img src="img/rocio/programacion.jpg" alt="Pantalla con código de programación" style="width:100%; height:100%; object-fit:cover;">
           </div>
           <div class="skill-lista">
-            <h4>Software Developer FullStack</h4>
+            <h4>Tecnologías</h4>
             <ul>
               <li>C#</li>
               <li>SQL</li>
-              <li>JAVASCRIPT</li>
+              <li>JavaScript</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="skill-block oculto" data-categoria="categoria2">
-        <h3>Categoría 2</h3>
+      <section class="skill-block oculto" data-categoria="ciberseguridad">
+        <h3>Mentora de Ciberseguridad</h3>
         <div class="skill-fila">
-          <div class="skill-visual" style="width:260px; height:220px; background:var(--color-border); display:flex; align-items:center; justify-content:center; border-radius:12px;">
-              <img src="img/rocio/ciberseguridad.jpeg" alt="Pantalla con código de ciberseguridad" style="width:100%; height:100%; object-fit:cover;">
-            <span style="color:var(--color-text-secondary);">[</span>
+          <div class="skill-visual" style="width:260px; height:220px; border-radius:12px; overflow:hidden;">
+            <img src="img/rocio/ciberseguridad.jpeg" alt="Pantalla con código de ciberseguridad" style="width:100%; height:100%; object-fit:cover;">
           </div>
           <div class="skill-lista">
-            <h4>Mentora de Ciberseguridad</h4>
+            <h4>Actividades</h4>
             <ul>
-              <li>Ayudante de proyectos de Investigación</li>
+              <li>Ayudante de proyectos de investigación</li>
               <li>OSINT</li>
             </ul>
           </div>
         </div>
-        </section>
+      </section>
 
       <h2 id="titulo-peliculas">Películas favoritas</h2>
 
@@ -120,19 +113,19 @@
             <li class="carousel-slide">
               <h3>Vampire Academy</h3>
               <div class="carousel-video">
-                <iframe src="https://www.youtube.com/embed/r-fwf5ITyni9U" title="Vampire Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/QuU8P-D0-is" title="Vampire Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </li>
             <li class="carousel-slide">
               <h3>Lucy</h3>
               <div class="carousel-video">
-                <iframe src="https://www.youtube.com/embed/r-bN7ksFEVO9U" title="Lucy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/-hpupbliDbk" title="Lucy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </li>
             <li class="carousel-slide">
               <h3>Aves de Presa</h3>
               <div class="carousel-video">
-                <iframe src="https://www.youtube.com/watch?v=cqYOShqq4zY" title="Pulp Fiction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/kGM4uYZzfu0" title="Aves de Presa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </li>
           </ul>
@@ -143,44 +136,37 @@
         <div class="carousel-puntos" id="carousel-puntos-peliculas"></div>
       </section>
 
-  <h2 id="titulo-discos">Discos favoritos</h2>
+      <h2 id="titulo-discos">Discos favoritos</h2>
 
-<section class="carousel" aria-labelledby="titulo-discos" data-etiqueta-slide="el disco">
-  <button type="button" class="carousel-flecha carousel-flecha--prev" aria-label="Disco anterior">❮</button>
+      <section class="carousel" aria-labelledby="titulo-discos" data-etiqueta-slide="la canción">
+        <button type="button" class="carousel-flecha carousel-flecha--prev" aria-label="Canción anterior">&#10094;</button>
 
-  <div class="carousel-ventana">
-    <ul class="carousel-pista" id="carousel-pista-discos">
-      <!-- Ariana Grande - Into You -->
-      <li class="carousel-slide">
-        <div class="carousel-spotify">
-          <iframe src="https://spotify.com" title="Into You - Ariana Grande" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="carousel-ventana">
+          <ul class="carousel-pista" id="carousel-pista-discos">
+            <li class="carousel-slide">
+              <div class="carousel-spotify">
+                <iframe src="https://open.spotify.com/embed/track/63y6xWR4gXz7bnUGOk8iI6?utm_source=generator" title="Into You - Ariana Grande" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+              <p class="carousel-nota">Canción favorita: Into You</p>
+            </li>
+            <li class="carousel-slide">
+              <div class="carousel-spotify">
+                <iframe src="https://open.spotify.com/embed/track/2ekn2ttSfGqwhhate0LSR0?utm_source=generator" title="New Rules - Dua Lipa" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+              <p class="carousel-nota">Canción favorita: New Rules</p>
+            </li>
+            <li class="carousel-slide">
+              <div class="carousel-spotify">
+                <iframe src="https://open.spotify.com/embed/track/44XjoNvtwevktFKjvVe1vH?utm_source=generator" title="Andrea - Bad Bunny" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+              <p class="carousel-nota">Canción favorita: Andrea</p>
+            </li>
+          </ul>
         </div>
-        <p class="carousel-nota">Canción favorita: Into You</p>
-      </li>
-      
-      <!-- Dua Lipa - New Rules -->
-      <li class="carousel-slide">
-        <div class="carousel-spotify">
-          <iframe src="https://spotify.com" title="New Rules - Dua Lipa" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <p class="carousel-nota">Canción favorita: New Rules</p>
-      </li>
 
-      <!-- Bad Bunny - Andrea -->
-      <li class="carousel-slide">
-        <div class="carousel-spotify">
-          <iframe src="https://spotify.com" title="Andrea - Bad Bunny" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <p class="carousel-nota">Canción favorita: Andrea</p>
-      </li>
-    </ul>
-  </div>
+        <button type="button" class="carousel-flecha carousel-flecha--next" aria-label="Canción siguiente">&#10095;</button>
 
-  <button type="button" class="carousel-flecha carousel-flecha--next" aria-label="Disco siguiente">❯</button>
-
-  <div class="carousel-puntos" id="carousel-puntos-discos"></div>
-</section>
-
+        <div class="carousel-puntos" id="carousel-puntos-discos"></div>
       </section>
     </main>
 
@@ -189,4 +175,3 @@
     </footer>
   </body>
 </html>
-
