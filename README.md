@@ -12,7 +12,7 @@ Somos cuatro. El sitio tiene una portada, un perfil individual por integrante, n
 |---|---|---|
 | Javier Nehuén López | [perfil-2.html](perfil-2.html) | [Jableed43](https://github.com/Jableed43) |
 | Rocío Ailen Arenas | [perfil-3.html](perfil-3.html) | [rocioailenar](https://github.com/rocioailenar) |
-| Facundo Sánchez | [perfil-4.html](perfil-4.html) | _pendiente_ |
+| Facundo Sánchez | [perfil-4.html](perfil-4.html) | [FacundoAreo](https://github.com/FacundoAreo)|
 | Damián Gorosito | [perfil-5.html](perfil-5.html) | [damiangorosito](https://github.com/damiangorosito) |
 
 > María Cristina Gutiérrez formó parte del equipo hasta el 22 de septiembre de 2026. Ver la nota en **Cambios en el equipo**, más abajo.
