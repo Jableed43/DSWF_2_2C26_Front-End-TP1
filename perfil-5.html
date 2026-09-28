@@ -1,172 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Damián Gorosito · BlueTech</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil - Damián Gorosito</title>
 
-    <!-- Google Fonts Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Devicon CDN para íconos de tecnologías -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicon/devicon@latest/devicon.min.css">
-
-    <!-- Hojas de estilo del proyecto -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/perfil.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/header-footer.css">
 
-    <!-- Encabezado y Navegación Principal -->
-    <header class="site-header">
-        <nav class="nav-container">
-            <div class="logo">
-                <a href="index.html"><strong>BlueTech</strong></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#cine">Cine</a></li>
-                <li><a href="#musica">Música</a></li>
-                <li><a href="bitacora.html">Bitácora</a></li>
-                <li class="dropdown">
-                    <a href="#">Integrantes ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="perfil-2.html">Javier López</a></li>
-                        <li><a href="perfil-3.html">Rocío Arenas</a></li>
-                        <li><a href="perfil-4.html">Facundo Sánchez</a></li>
-                        <li><a href="perfil-5.html" class="active">Damián Gorosito</a></li>
-                    </ul>
-                </li>
+    <script src="js/nav.js" defer></script>
+    <script src="js/perfil.js" defer></script>
+    <script src="js/damian.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Blue<span>Tech</span></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#perfiles">Perfiles</a></li>
+          <li><a href="bitacora.html">Bitácora</a></li>
+          <li class="dropdown">
+            <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Integrantes <span class="dropdown-flecha" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="perfil-2.html">Javier López</a></li>
+              <li><a href="perfil-3.html">Rocío Arenas</a></li>
+              <li><a href="perfil-4.html">Facundo Sánchez</a></li>
+              <li><a href="perfil-5.html">Damián Gorosito</a></li>
             </ul>
-        </nav>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Contenido Principal -->
-    <main class="perfil-main">
+    <main>
+      <h1 class="nombre-brillante">Damián Gorosito</h1>
 
-        <!-- Sección Sobre Mí / Cabecera de Perfil -->
-        <section id="sobre-mi" class="perfil-hero">
-            <div class="perfil-avatar-container">
-                <img src="img/damian/avatar.png" alt="Avatar de Damián Gorosito" class="avatar" id="avatar-damian">
-            </div>
-            <div class="perfil-bio">
-                <h1>Damián Gorosito</h1>
-                <p class="rol">Desarrollador Front End & Redactor Técnico</p>
-                <ul class="datos-personales">
-                    <li>📍 <strong>Ciudad:</strong> Buenos Aires, Argentina</li>
-                    <li>🎂 <strong>Edad:</strong> 24 años</li>
-                    <li>💻 <strong>GitHub:</strong> <a href="https://github.com/damiangorosito" target="_blank" rel="noopener">@damiangorosito</a></li>
-                </ul>
+      <img class="avatar-perfil" src="img/damian/avatar.jpg" alt="Foto de Damián Gorosito" width="160" height="160">
 
-                <!-- Bloque para la función propia de JS (js/damian.js) -->
-                <div class="interaccion-accion">
-                    <button id="btn-animar-damian" class="btn-interactivo">⚡ ¡Saludar e iluminar perfil!</button>
-                    <p id="mensaje-animado" class="mensaje-dinamico"></p>
-                </div>
-            </div>
-        </section>
+      <h2 id="titulo-sobre-mi">Sobre mí</h2>
 
-        <!-- Sección Habilidades (4 Mínimo según consigna) -->
-        <section id="habilidades" class="seccion-perfil">
-            <h2>Habilidades Técnicas</h2>
-            <div class="skills-grid">
-                <article class="skill-card">
-                    <i class="devicon-html5-plain colored"></i>
-                    <h3>HTML5</h3>
-                    <p>Estructuración semántica y maquetación web.</p>
-                </article>
-                <article class="skill-card">
-                    <i class="devicon-css3-plain colored"></i>
-                    <h3>CSS3 & Layouts</h3>
-                    <p>Diseño adaptable con CSS Grid y Flexbox.</p>
-                </article>
-                <article class="skill-card">
-                    <i class="devicon-javascript-plain colored"></i>
-                    <h3>JavaScript</h3>
-                    <p>Lógica dinámica e interacciones en el navegador.</p>
-                </article>
-                <article class="skill-card">
-                    <i class="devicon-git-plain colored"></i>
-                    <h3>Git & GitHub</h3>
-                    <p>Control de versiones colaborativo y gestión de ramas.</p>
-                </article>
-            </div>
-        </section>
+      <section class="sobre-mi" aria-labelledby="titulo-sobre-mi">
+        <p class="sobre-mi-contacto">📍 Buenos Aires, Argentina &middot; 🎂 35 años
+          &middot; <a class="enlace-github" href="https://github.com/damiangorosito" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </section>
 
-        <!-- Sección Películas Favoritas (3 Mínimo según consigna) -->
-        <section id="cine" class="seccion-perfil">
-            <h2>Películas Favoritas 🎬</h2>
-            <div class="carrusel-media" id="carrusel-peliculas">
-                <div class="cards-grid">
-                    <article class="media-card">
-                        <img src="img/damian/peli1.jpg" alt="Interstellar">
-                        <div class="media-info">
-                            <h3>Interstellar</h3>
-                            <p>Ciencia ficción dirigida por Christopher Nolan.</p>
-                        </div>
-                    </article>
-                    <article class="media-card">
-                        <img src="img/damian/peli2.jpg" alt="Matrix">
-                        <div class="media-info">
-                            <h3>Matrix</h3>
-                            <p>Clásico del cine de cibernética de las hermanas Wachowski.</p>
-                        </div>
-                    </article>
-                    <article class="media-card">
-                        <img src="img/damian/peli3.jpg" alt="El Club de la Pelea">
-                        <div class="media-info">
-                            <h3>El Club de la Pelea</h3>
-                            <p>Drama psicológico dirigido por David Fincher.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+      <h2 id="titulo-habilidades">Habilidades</h2>
 
-        <!-- Sección Discos Favoritos (3 Mínimo según consigna) -->
-        <section id="musica" class="seccion-perfil">
-            <h2>Discos Favoritos 🎵</h2>
-            <div class="carrusel-media" id="carrusel-discos">
-                <div class="cards-grid">
-                    <article class="media-card">
-                        <img src="img/damian/disco1.jpg" alt="Random Access Memories">
-                        <div class="media-info">
-                            <h3>Random Access Memories</h3>
-                            <p><strong>Daft Punk</strong> (2013)</p>
-                        </div>
-                    </article>
-                    <article class="media-card">
-                        <img src="img/damian/disco2.jpg" alt="The Dark Side of the Moon">
-                        <div class="media-info">
-                            <h3>The Dark Side of the Moon</h3>
-                            <p><strong>Pink Floyd</strong> (1973)</p>
-                        </div>
-                    </article>
-                    <article class="media-card">
-                        <img src="img/damian/disco3.jpg" alt="Oktubre">
-                        <div class="media-info">
-                            <h3>Oktubre</h3>
-                            <p><strong>Patricio Rey y sus Redonditos de Ricota</strong> (1986)</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+      <section class="skill-block" data-categoria="tecnicas">
+        <div class="skill-chip-grupo">
+          <span class="skill-chip">🐍 Python</span>
+          <span class="skill-chip">🌐 HTML5 &amp; CSS3</span>
+          <span class="skill-chip">🧠 Lógica de programación</span>
+          <span class="skill-chip">🧩 Resolución de problemas</span>
+        </div>
+      </section>
 
+      <h2 id="titulo-peliculas">Películas favoritas</h2>
+
+      <section class="carousel" aria-labelledby="titulo-peliculas" data-etiqueta-slide="la película">
+        <button type="button" class="carousel-flecha carousel-flecha--prev" aria-label="Película anterior">&#10094;</button>
+
+        <div class="carousel-ventana">
+          <ul class="carousel-pista" id="carousel-pista-peliculas">
+            <li class="carousel-slide">
+              <h3>El Señor de los Anillos</h3>
+              <div class="carousel-video">
+                <iframe src="https://www.youtube.com/embed/_nZdmwHrcnw" title="El Señor de los Anillos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </li>
+            <li class="carousel-slide">
+              <h3>El Gran Pez</h3>
+              <div class="carousel-video">
+                <iframe src="https://www.youtube.com/embed/JZTE078OmZg" title="El Gran Pez" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </li>
+            <li class="carousel-slide">
+              <h3>Pulp Fiction</h3>
+              <div class="carousel-video">
+                <iframe src="https://www.youtube.com/embed/r-PSxjTR174" title="Pulp Fiction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <button type="button" class="carousel-flecha carousel-flecha--next" aria-label="Película siguiente">&#10095;</button>
+
+        <div class="carousel-puntos" id="carousel-puntos-peliculas"></div>
+      </section>
+
+      <h2 id="titulo-discos">Discos favoritos</h2>
+
+      <section class="carousel" aria-labelledby="titulo-discos" data-etiqueta-slide="el disco">
+        <button type="button" class="carousel-flecha carousel-flecha--prev" aria-label="Disco anterior">&#10094;</button>
+
+        <div class="carousel-ventana">
+          <ul class="carousel-pista" id="carousel-pista-discos">
+            <li class="carousel-slide">
+              <div class="carousel-spotify">
+                <iframe src="https://open.spotify.com/embed/album/573TG9cHInMww2QgBeKqTy?utm_source=generator" title="Señales - Callejeros" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+              <p class="carousel-nota">Canción favorita: Creo</p>
+            </li>
+            <li class="carousel-slide">
+              <div class="carousel-spotify">
+                <iframe src="https://open.spotify.com/embed/album/0lKGADKI9s71jBqJe5xYhn?utm_source=generator" title="Feed the Machine - Poor Man's Poison" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+            </li>
+            <li class="carousel-slide">
+              <div class="carousel-spotify">
+                <iframe src="https://open.spotify.com/embed/album/5kk3PbroAezGBPucpoN4oC?utm_source=generator" title="Luzbelito - Patricio Rey y sus Redonditos de Ricota" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <button type="button" class="carousel-flecha carousel-flecha--next" aria-label="Disco siguiente">&#10095;</button>
+
+        <div class="carousel-puntos" id="carousel-puntos-discos"></div>
+      </section>
     </main>
 
-    <!-- Pie de Página -->
-    <footer class="site-footer">
-        <p>&copy; 2026 BlueTech · Desarrollo de Sistemas Web Front End (Comisión 2C26).</p>
+    <footer>
+      <p>&copy; 2026 BlueTech Proyecto. Todos los derechos reservados.</p>
     </footer>
-
-    <!-- Carga de Scripts del Proyecto -->
-    <script src="js/perfil.js"></script>
-    <script src="js/damian.js"></script>
-</body>
+  </body>
 </html>
