@@ -1,44 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - Facundo Sánchez</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - Facundo Sánchez</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/perfil.css">
-    <link rel="stylesheet" href="css/header-footer.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/perfil.css">
+  <link rel="stylesheet" href="css/header-footer.css">
 
+  <script src="js/perfil.js" defer></script>
 </head>
+
 <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">Blue<span>Tech</span></div>
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="index.html#perfiles">Perfiles</a></li>
-          <li><a href="bitacora.html">Bitácora</a></li>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Blue<span>Tech</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#perfiles">Perfiles</a></li>
+        <li><a href="bitacora.html">Bitácora</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="nombre-brillante">Facundo Areo Sánchez</h1>
+
+    <img class="avatar-perfil" src="img/facundo/avatar.jpg" alt="Foto de Facundo Sánchez" width="160" height="160">
+
+    <h2 id="titulo-sobre-mi">Sobre mí</h2>
+
+    <section class="sobre-mi" aria-labelledby="titulo-sobre-mi">
+      <p class="sobre-mi-contacto">
+        📍 Berazategui, Argentina &middot; 🎂 43 años
+        &middot; <span class="enlace-github" title="GitHub pendiente">GitHub</span>
+      </p>
+    </section>
+
+    <h2 id="titulo-habilidades">Habilidades</h2>
+
+    <section class="skill-block" data-categoria="tecnicas">
+      <div class="skill-chip-grupo">
+        <span class="skill-chip">🐘 PHP</span>
+        <span class="skill-chip">🅻 Laravel</span>
+        <span class="skill-chip">🗄️ MySQL</span>
+        <span class="skill-chip">🐍 Python</span>
+        <span class="skill-chip">☕ Java</span>
+        <span class="skill-chip">➕ C++</span>
+      </div>
+    </section>
+
+    <h2 id="titulo-peliculas">Películas favoritas</h2>
+
+    <section class="carousel" aria-labelledby="titulo-peliculas" data-etiqueta-slide="la película">
+      <button type="button" class="carousel-flecha carousel-flecha--prev"
+        aria-label="Película anterior">&#10094;</button>
+
+      <div class="carousel-ventana">
+        <ul class="carousel-pista" id="carousel-pista-peliculas">
+          <li class="carousel-slide">
+            <h3>1984</h3>
+            <div class="carousel-video">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/SXq3yMhobEU?si=khQX2AExFe4ON3Mx"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </li>
+          <li class="carousel-slide">
+            <h3>Un Mundo Feliz</h3>
+            <div class="carousel-video">
+              <iframe src="https://www.youtube.com/embed/xmpiTKFHhJ4" title="Un Mundo Feliz" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </li>
+          <li class="carousel-slide">
+            <h3>In Time</h3>
+            <div class="carousel-video">
+              <iframe src="https://www.youtube.com/embed/xhYUaR5QiUs" title="In Time" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </li>
+          <li class="carousel-slide">
+            <h3>Fallout</h3>
+            <div class="carousel-video">
+              <iframe src="https://www.youtube.com/embed/Gtl-6RCOl84" title="Fallout" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </li>
         </ul>
-      </nav>
-    </header>
+      </div>
 
-    <main>
-      <h1 class="nombre-brillante">Facundo Sánchez</h1>
+      <button type="button" class="carousel-flecha carousel-flecha--next"
+        aria-label="Película siguiente">&#10095;</button>
 
-      <h2 id="titulo-sobre-mi">Sobre mí</h2>
+      <div class="carousel-puntos" id="carousel-puntos-peliculas"></div>
+    </section>
 
-      <section class="sobre-mi" aria-labelledby="titulo-sobre-mi">
-        <p class="sobre-mi-contacto"><span class="enlace-github" title="GitHub pendiente">GitHub</span></p>
-        <p>Perfil en construcción.</p>
-      </section>
-    </main>
+    <h2 id="titulo-discos">Discos favoritos</h2>
 
-    <footer>
-      <p>&copy; 2026 BlueTech Proyecto. Todos los derechos reservados.</p>
-    </footer>
+    <section class="carousel" aria-labelledby="titulo-discos" data-etiqueta-slide="el disco">
+      <button type="button" class="carousel-flecha carousel-flecha--prev" aria-label="Disco anterior">&#10094;</button>
+
+      <div class="carousel-ventana">
+        <ul class="carousel-pista" id="carousel-pista-discos">
+          <li class="carousel-slide">
+            <div class="carousel-spotify">
+              <iframe src="https://open.spotify.com/embed/album/71p2A2NvxBtP6t74q9lAhD?utm_source=generator"
+                title="El Otro Yo" width="100%" height="352" frameborder="0" allowfullscreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            </div>
+          </li>
+          <li class="carousel-slide">
+            <div class="carousel-spotify">
+              <iframe src="https://open.spotify.com/embed/album/2inxDlajVBxpxREiJpyh4J?utm_source=generator"
+                title="Arbolito" width="100%" height="352" frameborder="0" allowfullscreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            </div>
+          </li>
+          <li class="carousel-slide">
+            <div class="carousel-spotify">
+              <iframe src="https://open.spotify.com/embed/album/79wSuKtuvDstwlWV1KbLMl?utm_source=generator"
+                title="Fun People" width="100%" height="352" frameborder="0" allowfullscreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <button type="button" class="carousel-flecha carousel-flecha--next" aria-label="Disco siguiente">&#10095;</button>
+
+      <div class="carousel-puntos" id="carousel-puntos-discos"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 BlueTech Proyecto. Todos los derechos reservados.</p>
+  </footer>
 </body>
+
 </html>
