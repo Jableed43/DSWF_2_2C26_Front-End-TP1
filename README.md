@@ -39,7 +39,8 @@ Somos cuatro. El sitio tiene una portada, un perfil individual por integrante, n
 │   ├── style.css         variables y estilos base
 │   ├── header-footer.css header y footer compartidos por todas las páginas
 │   ├── perfil.css        estilos de los perfiles (carruseles, etiquetas, tarjetas)
-│   └── home.css          estilos exclusivos de la portada (hero, tarjetas, cta)
+│   ├── home.css          estilos exclusivos de la portada (hero, tarjetas, cta)
+│   └── bitacora.css      estilos exclusivos de la bitácora (contenedor y tarjetas)
 ├── js/
 │   ├── home.js           función de la portada
 │   ├── perfil.js         filtros, carruseles y tarjetas de los perfiles

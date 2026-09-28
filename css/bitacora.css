@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Estilos exclusivos de la bitacora (bitacora.html): el contenedor
+   centrado y las tarjetas de cada entrada.
+   El fondo, el color de texto y la tipografia del body ya vienen de
+   perfil.css (que esta pagina tambien carga), asi que no se repiten aca.
+   ========================================================================== */
+
+/* Contenedor estandar centrado con margenes laterales */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ajustes de espaciado para secciones principales */
+main.container {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.presentacion-bitacora {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.entrada-bitacora {
+    margin-bottom: 30px;
+}
+
+.tarjeta-bitacora {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-bitacora header h2 {
+    margin-top: 0;
+    color: #0066cc;
+}
+
+/* Pie de pagina centrado en el contenedor */
+.footer-principal .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
