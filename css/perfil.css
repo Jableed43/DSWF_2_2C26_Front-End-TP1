@@ -656,4 +656,47 @@ body {
         height: 32px;
         font-size: 0.9rem;
     }
+    .btn-animacion { 
+        background-color: #2563EB; 
+        color: #ffffff; border: none; 
+        padding: 12px 24px; 
+        border-radius: 8px; 
+        font-size: 1rem; 
+        font-weight: 600; 
+        cursor: pointer; 
+        transition: transform 0.2s, background-color 0.2s; 
+    }
+    .btn-animacion:hover { 
+        background-color: #1E40AF; 
+        transform: scale(1.05); 
+    }
+    .mensaje-oculto { 
+        opacity: 0; 
+        transition: opacity 0.5s ease-in-out; 
+        margin-top: 12px; 
+        font-weight: 600; 
+        color: #0066CC; 
+    }
+
+    .mensaje-visible { 
+        opacity: 1; 
+    }
+    @keyframes efectoBrilloGiro { 
+        0% { 
+            transform: scale(1) rotate(0deg); 
+            box-shadow: 0 0 0px rgba(37, 99, 235, 0); 
+        } 
+        50% { 
+            transform: scale(1.08) rotate(4deg); 
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.8); 
+        } 
+        100% { 
+            transform: scale(1) rotate(0deg); 
+            box-shadow: 0 0 0px rgba(37, 99, 235, 0); 
+        }
+    } 
+    .animacion-efecto { animation: efectoBrilloGiro 1s ease-in-out; }
+
+
+    
 }
