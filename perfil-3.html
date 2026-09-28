@@ -85,9 +85,9 @@
           <div class="skill-lista">
             <h4>Software Developer FullStack</h4>
             <ul>
-              <li>Ítem de habilidad 1</li>
-              <li>Ítem de habilidad 2</li>
-              <li>Ítem de habilidad 3</li>
+              <li>C#</li>
+              <li>SQL</li>
+              <li>JAVASCRIPT</li>
             </ul>
           </div>
         </div>
@@ -97,17 +97,18 @@
         <h3>Categoría 2</h3>
         <div class="skill-fila">
           <div class="skill-visual" style="width:260px; height:220px; background:var(--color-border); display:flex; align-items:center; justify-content:center; border-radius:12px;">
-            <span style="color:var(--color-text-secondary);">[Imagen Placeholder]</span>
+              <img src="img/rocio/ciberseguridad.jpeg" alt="Pantalla con código de ciberseguridad" style="width:100%; height:100%; object-fit:cover;">
+            <span style="color:var(--color-text-secondary);">[</span>
           </div>
           <div class="skill-lista">
-            <h4>[Título Descriptivo]</h4>
+            <h4>Mentora de Ciberseguridad</h4>
             <ul>
-              <li>Ítem de habilidad 1</li>
-              <li>Ítem de habilidad 2</li>
+              <li>Ayudante de proyectos de Investigación</li>
+              <li>OSINT</li>
             </ul>
           </div>
         </div>
-      </section>
+        </section>
 
       <h2 id="titulo-peliculas">Películas favoritas</h2>
 
@@ -117,21 +118,21 @@
         <div class="carousel-ventana">
           <ul class="carousel-pista" id="carousel-pista-peliculas">
             <li class="carousel-slide">
-              <h3>[Título de Película 1]</h3>
-              <div class="carousel-video" style="background:var(--color-border); display:flex; align-items:center; justify-content:center;">
-                <span style="color:var(--color-text-secondary);">[Video/Imagen Placeholder]</span>
+              <h3>Vampire Academy</h3>
+              <div class="carousel-video">
+                <iframe src="https://www.youtube.com/embed/r-fwf5ITyni9U" title="Vampire Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </li>
             <li class="carousel-slide">
-              <h3>[Título de Película 2]</h3>
-              <div class="carousel-video" style="background:var(--color-border); display:flex; align-items:center; justify-content:center;">
-                <span style="color:var(--color-text-secondary);">[Video/Imagen Placeholder]</span>
+              <h3>Lucy</h3>
+              <div class="carousel-video">
+                <iframe src="https://www.youtube.com/embed/r-bN7ksFEVO9U" title="Lucy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </li>
             <li class="carousel-slide">
-              <h3>[Título de Película 3]</h3>
-              <div class="carousel-video" style="background:var(--color-border); display:flex; align-items:center; justify-content:center;">
-                <span style="color:var(--color-text-secondary);">[Video/Imagen Placeholder]</span>
+              <h3>Aves de Presa</h3>
+              <div class="carousel-video">
+                <iframe src="https://www.youtube.com/watch?v=cqYOShqq4zY" title="Pulp Fiction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </li>
           </ul>
@@ -142,80 +143,45 @@
         <div class="carousel-puntos" id="carousel-puntos-peliculas"></div>
       </section>
 
-      <h2 id="titulo-discos">Discos favoritos</h2>
+  <h2 id="titulo-discos">Discos favoritos</h2>
 
-      <section class="carousel" aria-labelledby="titulo-discos" data-etiqueta-slide="el disco">
-        <button type="button" class="carousel-flecha carousel-flecha--prev" aria-label="Disco anterior">&#10094;</button>
+<section class="carousel" aria-labelledby="titulo-discos" data-etiqueta-slide="el disco">
+  <button type="button" class="carousel-flecha carousel-flecha--prev" aria-label="Disco anterior">❮</button>
 
-        <div class="carousel-ventana">
-          <ul class="carousel-pista" id="carousel-pista-discos">
-            <li class="carousel-slide">
-              <div class="carousel-spotify" style="height:352px; background:var(--color-border); display:flex; align-items:center; justify-content:center;">
-                <span style="color:var(--color-text-secondary);">[Spotify Iframe Placeholder]</span>
-              </div>
-            </li>
-            <li class="carousel-slide">
-              <div class="carousel-spotify" style="height:352px; background:var(--color-border); display:flex; align-items:center; justify-content:center;">
-                <span style="color:var(--color-text-secondary);">[Spotify Iframe Placeholder]</span>
-              </div>
-            </li>
-            <li class="carousel-slide">
-              <div class="carousel-spotify" style="height:352px; background:var(--color-border); display:flex; align-items:center; justify-content:center;">
-                <span style="color:var(--color-text-secondary);">[Spotify Iframe Placeholder]</span>
-              </div>
-            </li>
-          </ul>
+  <div class="carousel-ventana">
+    <ul class="carousel-pista" id="carousel-pista-discos">
+      <!-- Ariana Grande - Into You -->
+      <li class="carousel-slide">
+        <div class="carousel-spotify">
+          <iframe src="https://spotify.com" title="Into You - Ariana Grande" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
+        <p class="carousel-nota">Canción favorita: Into You</p>
+      </li>
+      
+      <!-- Dua Lipa - New Rules -->
+      <li class="carousel-slide">
+        <div class="carousel-spotify">
+          <iframe src="https://spotify.com" title="New Rules - Dua Lipa" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <p class="carousel-nota">Canción favorita: New Rules</p>
+      </li>
 
-        <button type="button" class="carousel-flecha carousel-flecha--next" aria-label="Disco siguiente">&#10095;</button>
+      <!-- Bad Bunny - Andrea -->
+      <li class="carousel-slide">
+        <div class="carousel-spotify">
+          <iframe src="https://spotify.com" title="Andrea - Bad Bunny" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <p class="carousel-nota">Canción favorita: Andrea</p>
+      </li>
+    </ul>
+  </div>
 
-        <div class="carousel-puntos" id="carousel-puntos-discos"></div>
+  <button type="button" class="carousel-flecha carousel-flecha--next" aria-label="Disco siguiente">❯</button>
+
+  <div class="carousel-puntos" id="carousel-puntos-discos"></div>
+</section>
+
       </section>
-
-      <h2 id="titulo-juegos">Algo extra de mí</h2>
-
-      <section class="juegos-grid" aria-labelledby="titulo-juegos">
-        <div class="juego-card" tabindex="0" role="button" aria-label="Ver ficha 1">
-          <div class="juego-card-inner">
-            <div class="juego-card-frente" style="background:var(--color-border); display:flex; flex-direction:column; align-items:center; justify-content:center;">
-              <span class="juego-info-hint">+ info</span>
-              <span style="margin:2rem 0; color:var(--color-text-secondary);">[Imagen]</span>
-              <p>[Título Frontal]</p>
-            </div>
-            <div class="juego-card-dorso">
-              <p>[Subtítulo o descripción]</p>
-              <p>[Dato Clave]</p>
-            </div>
-          </div>
-        </div>
-        <div class="juego-card" tabindex="0" role="button" aria-label="Ver ficha 2">
-          <div class="juego-card-inner">
-            <div class="juego-card-frente" style="background:var(--color-border); display:flex; flex-direction:column; align-items:center; justify-content:center;">
-              <span class="juego-info-hint">+ info</span>
-              <span style="margin:2rem 0; color:var(--color-text-secondary);">[Imagen]</span>
-              <p>[Título Frontal]</p>
-            </div>
-            <div class="juego-card-dorso">
-              <p>[Subtítulo o descripción]</p>
-              <p>[Dato Clave]</p>
-            </div>
-          </div>
-        </div>
-        <div class="juego-card" tabindex="0" role="button" aria-label="Ver ficha 3">
-          <div class="juego-card-inner">
-            <div class="juego-card-frente" style="background:var(--color-border); display:flex; flex-direction:column; align-items:center; justify-content:center;">
-              <span class="juego-info-hint">+ info</span>
-              <span style="margin:2rem 0; color:var(--color-text-secondary);">[Imagen]</span>
-              <p>[Título Frontal]</p>
-            </div>
-            <div class="juego-card-dorso">
-              <p>[Subtítulo o descripción]</p>
-              <p>[Dato Clave]</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
     </main>
 
     <footer>
