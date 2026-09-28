@@ -12,12 +12,69 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/perfil.css">
+
+    <!-- Estilos contenedores con márgenes estandarizados -->
+    <style>
+        /* Contenedor estándar centrado con márgenes laterales */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        /* Ajustes de espaciado para secciones principales */
+        main.container {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .presentacion-bitacora {
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .entrada-bitacora {
+            margin-bottom: 30px;
+        }
+
+        .tarjeta-bitacora {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .tarjeta-bitacora header h2 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+
+        /* Pie de página centrado en el contenedor */
+        .footer-principal .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Encabezado y Navegación Principal -->
     <header class="header-principal">
-        <nav class="nav-container">
+        <nav class="nav-container container">
             <div class="logo">
                 <a href="index.html"><strong>BlueTech</strong></a>
             </div>
@@ -37,8 +94,8 @@
         </nav>
     </header>
 
-    <!-- Contenido Principal de la Bitácora -->
-    <main>
+    <!-- Contenido Principal dentro de un contenedor estándar -->
+    <main class="container">
 
         <!-- Presentación de la Bitácora -->
         <section class="presentacion-bitacora">
@@ -186,7 +243,9 @@
 
     <!-- Pie de página -->
     <footer class="footer-principal">
-        <p>&copy; 2026 BlueTech · Desarrollo de Sistemas Web Front End (Comisión 2C26).</p>
+        <div class="container">
+            <p>&copy; 2026 BlueTech · Desarrollo de Sistemas Web Front End (Comisión 2C26).</p>
+        </div>
     </footer>
 
 </body>
