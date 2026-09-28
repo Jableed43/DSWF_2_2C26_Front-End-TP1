@@ -114,16 +114,14 @@ Por eso su perfil (`perfil-1.html`) ya no forma parte del sitio publicado. Su tr
 
 ## Uso de IA y Criterio de Autoría
 
-En cumplimiento con el requisito transversal establecido en la consigna del TP1:
+En cumplimiento con el requisito transversal establecido en la consigna del TP1: el equipo ya contaba con conocimientos previos de maquetación y programación, y decidió cada componente y cada línea de diseño por su cuenta. La IA (ChatGPT, Claude y Gemini, con **planes gratuitos**) fue un acompañamiento puntual en el camino, no el punto de partida de las decisiones.
 
-* **Herramientas y Modelos Utilizados:** Se consultaron modelos de lenguaje (como ChatGPT, Claude y Gemini) como asistentes técnicos de desarrollo, resolución de dudas conceptuales y apoyo en la redacción de documentación.
-* **Ámbitos de Asistencia y Depuración (Debugging):**
-  * **Estructura y CSS:** Consultas sobre maquetación semántica en HTML5 y optimización de layouts responsivos con CSS Grid y Flexbox.
-  * **JavaScript Vanilla:** Asistencia en la revisión de sintaxis, depuración de errores en la consola del navegador y soporte en la lógica de interacciones dinámicas (como la rotación de tarjetas y el manejo de los carruseles).
-  * **Documentación:** Apoyo en la organización y formateo en Markdown del archivo `README.md`.
-* **Planes y Experiencia Previa del Equipo:** Las herramientas se utilizaron mediante **planes gratuitos**. El equipo contaba con conocimientos previos de maquetación y programación, por lo que la IA se empleó como un complemento para acelerar la resolución de bloqueos puntuales.
-* **Generación de Imágenes e Ilustraciones:** **No se utilizaron herramientas de IA para la creación de imágenes, logotipos ni avatares.** Todos los recursos visuales del sitio corresponden a fotografías/avatares propios de los integrantes y los íconos técnicos provienen directamente de fuentes vectoriales y la CDN de Devicon.
-* **Revisión y Control Humano:** Cada sugerencia de código generada por IA fue probada, modificada y adaptada activamente por los integrantes del equipo antes de integrarse al repositorio grupal. Se aseguró la comprensión completa del código fuente para mantener la autoría y la responsabilidad técnica del proyecto.
+* **Dónde acompañó:**
+  * **Estructura y CSS:** alguna consulta puntual sobre maquetación semántica en HTML5 y ajustes de layouts responsivos con CSS Grid y Flexbox.
+  * **JavaScript:** una mano para revisar sintaxis y encontrar errores en la consola del navegador, sobre la lógica de interacciones (carruseles, tarjetas giratorias) que el equipo ya tenía pensada.
+  * **Documentación:** ayuda para ordenar y dar formato en Markdown al `README.md`.
+* **Imágenes:** no se usó IA para generar imágenes, logos ni avatares. Todos los recursos visuales son fotografías o avatares propios de los integrantes, y los íconos técnicos vienen directamente de la CDN de Devicon.
+* **Revisión humana:** cada sugerencia se probó, se modificó y se entendió por completo antes de sumarla al repositorio. Las decisiones de diseño y la responsabilidad técnica del proyecto son del equipo.
 
 ## Pendientes
 
