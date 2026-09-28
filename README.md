@@ -42,6 +42,7 @@ Somos cuatro. El sitio tiene una portada, un perfil individual por integrante, n
 │   ├── home.css          estilos exclusivos de la portada (hero, tarjetas, cta)
 │   └── bitacora.css      estilos exclusivos de la bitácora (contenedor y tarjetas)
 ├── js/
+│   ├── nav.js            dropdown "Integrantes" del header, en todas las páginas
 │   ├── home.js           función de la portada
 │   ├── perfil.js         filtros, carruseles y tarjetas de los perfiles
 │   └── damian.js         script del perfil de Damián
@@ -86,6 +87,7 @@ Portada, header y footer:
 
 | Dónde | Archivo | Qué hace |
 |---|---|---|
+| Todas las páginas | `js/nav.js` | El dropdown "Integrantes" del header se abre y cierra al hacer clic, y también con clic afuera o con Escape. |
 | Portada | `js/home.js` | El botón **Sorprendeme** elige un integrante al azar y abre su perfil. |
 | Perfil de Javier | `js/perfil.js` | Filtro de habilidades por categoría, carruseles de películas y discos, y tarjetas que se dan vuelta al hacer clic. |
 | Perfil de Rocío | `js/perfil.js` | Filtro de habilidades (Desarrollo / Ciberseguridad) y carruseles de películas y canciones. |

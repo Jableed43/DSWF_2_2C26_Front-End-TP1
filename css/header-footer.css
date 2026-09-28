@@ -67,6 +67,80 @@ body > header {
     color: var(--primary-blue);
 }
 
+/* Dropdown "Integrantes" del menu, con JS en js/nav.js */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: var(--gray-dark);
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.dropdown-toggle:hover,
+.dropdown.abierto .dropdown-toggle {
+    color: var(--primary-blue);
+}
+
+.dropdown-toggle .dropdown-flecha {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.dropdown.abierto .dropdown-flecha {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1100;
+    margin-top: 0.6rem;
+    min-width: 180px;
+    max-width: min(220px, calc(100vw - 2rem));
+    box-sizing: border-box;
+    background-color: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0.5rem 0;
+    display: none;
+}
+
+.dropdown.abierto .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.55rem 1.1rem;
+    color: var(--gray-dark);
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--gray-light);
+    color: var(--primary-blue);
+}
+
 
 body > footer {
     background-color: var(--gray-light);
