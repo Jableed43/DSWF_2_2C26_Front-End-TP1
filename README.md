@@ -109,16 +109,16 @@ Por eso su perfil (`perfil-1.html`) ya no forma parte del sitio publicado. Su tr
 
 ## Uso de IA y Criterio de Autoría
 
-En cumplimiento con el requisito transversal establecido en la consigna del TP1 [1]:
+En cumplimiento con el requisito transversal establecido en la consigna del TP1:
 
-* **Herramientas y Modelos Utilizados:** Se consultaron modelos de lenguaje (como ChatGPT, Claude y Gemini) como asistentes técnicos de desarrollo, resolución de dudas conceptuales y apoyo en la redacción de documentación [1, 2].
+* **Herramientas y Modelos Utilizados:** Se consultaron modelos de lenguaje (como ChatGPT, Claude y Gemini) como asistentes técnicos de desarrollo, resolución de dudas conceptuales y apoyo en la redacción de documentación.
 * **Ámbitos de Asistencia y Depuración (Debugging):**
-  * **Estructura y CSS:** Consultas sobre maquetación semántica en HTML5 y optimización de layouts responsivos con CSS Grid y Flexbox [1-3].
-  * **JavaScript Vanilla:** Asistencia en la revisión de sintaxis, depuración de errores en la consola del navegador y soporte en la lógica de interacciones dinámicas (como la rotación de tarjetas y el manejo de los carruseles) [1, 2, 4].
-  * **Documentación:** Apoyo en la organización y formateo en Markdown del archivo `README.md` [1].
-* **Planes y Experiencia Previa del Equipo:** Las herramientas se utilizaron mediante **planes gratuitos** [1]. El equipo contaba con conocimientos previos de maquetación y programación, por lo que la IA se empleó como un complemento para acelerar la resolución de bloqueos puntuales [1, 2].
-* **Generación de Imágenes e Ilustraciones:** **No se utilizaron herramientas de IA para la creación de imágenes, logotipos ni avatares.** Todos los recursos visuales del sitio corresponden a fotografías/avatares propios de los integrantes y los íconos técnicos provienen directamente de fuentes vectoriales y la CDN de Devicon [1, 3, 5].
-* **Revisión y Control Humano:** Cada sugerencia de código generada por IA fue probada, modificada y adaptada activamente por los integrantes del equipo antes de integrarse al repositorio grupal [1, 2]. Se aseguró la comprensión completa del código fuente para mantener la autoría y la responsabilidad técnica del proyecto [2].
+  * **Estructura y CSS:** Consultas sobre maquetación semántica en HTML5 y optimización de layouts responsivos con CSS Grid y Flexbox.
+  * **JavaScript Vanilla:** Asistencia en la revisión de sintaxis, depuración de errores en la consola del navegador y soporte en la lógica de interacciones dinámicas (como la rotación de tarjetas y el manejo de los carruseles).
+  * **Documentación:** Apoyo en la organización y formateo en Markdown del archivo `README.md`.
+* **Planes y Experiencia Previa del Equipo:** Las herramientas se utilizaron mediante **planes gratuitos**. El equipo contaba con conocimientos previos de maquetación y programación, por lo que la IA se empleó como un complemento para acelerar la resolución de bloqueos puntuales.
+* **Generación de Imágenes e Ilustraciones:** **No se utilizaron herramientas de IA para la creación de imágenes, logotipos ni avatares.** Todos los recursos visuales del sitio corresponden a fotografías/avatares propios de los integrantes y los íconos técnicos provienen directamente de fuentes vectoriales y la CDN de Devicon.
+* **Revisión y Control Humano:** Cada sugerencia de código generada por IA fue probada, modificada y adaptada activamente por los integrantes del equipo antes de integrarse al repositorio grupal. Se aseguró la comprensión completa del código fuente para mantener la autoría y la responsabilidad técnica del proyecto.
 
 ```
 ## Pendientes
