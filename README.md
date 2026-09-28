@@ -92,7 +92,7 @@ Portada, header y footer:
 | Perfil de Javier | `js/perfil.js` | Filtro de habilidades por categoría, carruseles de películas y discos, y tarjetas que se dan vuelta al hacer clic. |
 | Perfil de Rocío | `js/perfil.js` | Filtro de habilidades (Desarrollo / Ciberseguridad) y carruseles de películas y canciones. |
 | Perfiles con carrusel (Rocío, Facundo, Damián) | `js/perfil.js` | Carruseles de películas y discos con flechas y puntos. Al cambiar de slide se frena el video o el disco que estaba sonando. |
-| Perfil de Damián | `js/damian.js` | _Pendiente: su función propia._ |
+| Perfil de Damián | `js/damian.js` | Botón interactivo con animación, @keyframes sobre avatar y despliegue dinámico de mensaje. |
 
 ## Cómo verlo en local
 
