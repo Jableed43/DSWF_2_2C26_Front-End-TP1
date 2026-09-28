@@ -31,7 +31,7 @@ Somos cuatro. El sitio tiene una portada, un perfil individual por integrante, n
 ├── index.html            portada: presenta al equipo y lista los perfiles
 ├── bitacora.html         bitácora del proceso
 ├── perfil-2.html         Javier
-├── perfil-3.html         Rocío (en construcción)
+├── perfil-3.html         Rocío
 ├── perfil-4.html         Facundo (en construcción)
 ├── perfil-5.html         Damián
 ├── perfil-template.html  plantilla base de los perfiles
@@ -86,7 +86,8 @@ Portada, header y footer:
 |---|---|---|
 | Portada | `js/home.js` | El botón **Sorprendeme** elige un integrante al azar y abre su perfil. |
 | Perfil de Javier | `js/perfil.js` | Filtro de habilidades por categoría, carruseles de películas y discos, y tarjetas que se dan vuelta al hacer clic. |
-| Perfiles con carrusel (Damián) | `js/perfil.js` | Carruseles de películas y discos con flechas y puntos. Al cambiar de slide se frena el video o el disco que estaba sonando. |
+| Perfil de Rocío | `js/perfil.js` | Filtro de habilidades (Desarrollo / Ciberseguridad) y carruseles de películas y canciones. |
+| Perfiles con carrusel (Rocío, Damián) | `js/perfil.js` | Carruseles de películas y discos con flechas y puntos. Al cambiar de slide se frena el video o el disco que estaba sonando. |
 | Perfil de Damián | `js/damian.js` | _Pendiente: su función propia._ |
 
 ## Cómo verlo en local
@@ -125,7 +126,7 @@ En cumplimiento con el requisito transversal establecido en la consigna del TP1:
 
 - Capturas de pantalla de la portada y de cada perfil.
 - Publicar en Vercel y agregar la URL.
-- Datos de Rocío y Facundo, y el GitHub de Facundo.
-- Función propia del perfil de Damián.
+- Datos de Facundo y su GitHub.
+- Función dinámica propia en los perfiles de Rocío y Damián (hoy comparten el filtro y el carrusel generales).
 - Breakpoints de 400, 900 y 1200 px en la portada.
 - Completar la bitácora con las decisiones del equipo.
