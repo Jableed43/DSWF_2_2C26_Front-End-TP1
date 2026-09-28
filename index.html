@@ -5,257 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueTech · TP1 Front End</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fuentes Externas -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Conexión con los Estilos Profesionales -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header-footer.css">
-
-    <style>
-        :root {
-            --primary-blue: #0066cc;
-            --dark-blue: #004499;
-            --light-blue: #e6f0fa;
-            --white: #ffffff;
-            --black: #111111;
-            --gray-dark: #333333;
-            --gray-light: #f4f4f6;
-            --gray-border: #dddddd;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--white);
-            color: var(--gray-dark);
-            line-height: 1.6;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--gray-light) 0%, var(--light-blue) 100%);
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            color: var(--black);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--gray-dark);
-            margin-bottom: 2rem;
-        }
-
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 0.8rem 2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--dark-blue);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--black);
-            border: 2px solid var(--black);
-            padding: 0.8rem 2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--black);
-            color: var(--white);
-        }
-
-        .features {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--black);
-            margin-bottom: 3rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background-color: var(--white);
-            border: 1px solid var(--gray-border);
-            border-radius: 8px;
-            padding: 2.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            border-color: var(--primary-blue);
-        }
-
-        .card-icon {
-            font-size: 2rem;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .card h3 {
-            font-size: 1.4rem;
-            color: var(--black);
-            margin-bottom: 1rem;
-        }
-
-        .card p {
-            color: var(--gray-dark);
-        }
-
-        .cta-section {
-            background-color: var(--black);
-            color: var(--white);
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            color: var(--gray-border);
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .grid--perfiles {
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 1.25rem;
-        }
-
-        .card--perfil {
-            display: block;
-            padding: 1.5rem 0.75rem;
-            text-align: center;
-            text-decoration: none;
-        }
-
-        .card--perfil h3 {
-            margin: 1rem 0 0;
-            font-size: 1rem;
-        }
-
-        .card-avatar {
-            display: block;
-            width: 100%;
-            max-width: 120px;
-            aspect-ratio: 1 / 1;
-            margin: 0 auto;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center 25%;
-        }
-
-        /* mientras no haya foto: circulo con la inicial */
-        .card-avatar--vacio {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--light-blue);
-            color: var(--primary-blue);
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        .section-sub {
-            text-align: center;
-            color: var(--gray-dark);
-            margin: -2rem 0 2.5rem;
-        }
-
-        .perfiles-accion {
-            text-align: center;
-            margin-top: 2.5rem;
-        }
-
-        .perfiles-accion button {
-            border: 0;
-            cursor: pointer;
-            font: inherit;
-            font-weight: 600;
-        }
-
-        .perfiles-accion button:disabled {
-            opacity: 0.7;
-            cursor: default;
-        }
-
-        #mensaje-sorpresa {
-            margin-top: 1rem;
-            color: var(--gray-dark);
-            min-height: 1.6em;
-        }
-
-        /* Responsive design rules */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .nav-links {
-                gap: 1rem;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .hero-buttons {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .btn-primary, .btn-secondary {
-                width: 100%;
-                text-align: center;
-            }
-        }
-    </style>
 
     <script src="js/home.js" defer></script>
 </head>
@@ -263,11 +20,14 @@
 
     <header>
         <nav class="navbar">
-            <div class="logo">Blue<span>Tech</span></div>
+            <div class="logo">G<span>25</span></div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#perfiles">Perfiles</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
                 <li><a href="bitacora.html">Bitácora</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>

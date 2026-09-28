@@ -4,182 +4,183 @@
    Variables de Diseño - Paleta y Tipografía (Ref: context.md)
    ========================================================================== */
 :root {
-  /* Tipografía */
   --font-family-base: 'Poppins', sans-serif;
   --line-height-base: 1.55;
 
-  /* Paleta de Colores Principales */
-  --color-primary: #2563EB;       /* Acción primaria destacada (CTA) */
-  --color-secondary: #0F172A;     /* Botones secundarios, títulos y texto primario */
-  
-  /* Superficies y Fondos */
-  --color-background: #F1F5F9;    /* Fondo de pantalla general (Slate 100) */
-  --color-surface: #FFFFFF;       /* Tarjetas, inputs y superficies limpias */
-  
-  /* Bordes y Textos Accesorios */
-  --color-border: #E2E8F0;        /* Bordes y divisores finos (Slate 200) */
-  --color-text-secondary: #64748B; /* Textos secundarios, descripciones, placeholders */
+  --color-primary: #2563EB;
+  --color-secondary: #0F172A;
+
+  --color-background: #F1F5F9;
+  --color-surface: #FFFFFF;
+
+  --color-border: #E2E8F0;
+  --color-text-secondary: #64748B;
+
+  /* Compatibility aliases for existing code in other files */
+  --white: var(--color-surface);
+  --gray-dark: var(--color-secondary);
+  --gray-light: #f4f4f6;
+  --gray-border: var(--color-border);
 }
 
-/* ==========================================================================
-   Estilos Base Generales (Reseteo y Aplicación de variables)
-   ========================================================================== */
-body {
-  font-family: var(--font-family-base);
-  line-height: var(--line-height-base);
-  background-color: var(--color-background);
-  color: var(--color-secondary); /* Texto primario */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-/* Tipografía de Títulos (Poppins Semibold/Bold) */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  color: var(--color-secondary);
-  margin-top: 0;
-}
-
-/* Textos de cuerpo y descripciones */
-p, .text-secondary {
-  color: var(--color-text-secondary);
-}
-
-/* ==========================================================================
-   Clases Estructurales Sugeridas
-   ========================================================================== */
-/* Tarjetas */
-.card {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 12px; /* Ajustar según preferencia, redondeo moderno */
-  padding: 1.5rem;
-  /* El efecto 'elevation' ya se da por el contraste entre fondo y tarjeta, 
-     pero se puede agregar una sombra muy sutil si se desea: */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-/* Divisores de secciones */
-.divider {
-  border: 0;
-  height: 1px;
-  background-color: var(--color-border);
-  margin: 2rem 0;
-}
-
-/* Botones Base */
-.btn {
   font-family: var(--font-family-base);
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  border: none;
 }
 
-/* .fondo{
-
-} */
-
-
-.btn-primary {
-  background-color: var(--color-primary);
-  color: #FFFFFF;
-}
-
-.btn-primary:hover {
-  background-color: var(--color-secondary); /* Estado hover hacia azul/neutro oscuro */
-}
-
-.btn-secondary {
-  background-color: var(--color-surface);
-  color: var(--color-secondary);
-  border: 1px solid var(--color-border);
-}
-
-.btn-secondary:hover {
-  background-color: var(--color-border);
+body {
+    background-color: var(--white);
+    color: var(--gray-dark);
+    line-height: 1.6;
 }
 
 /* ==========================================================================
-   1. DISEÑO BASE: CELULAR (Pantallas normales de smartphones)
-   Rango: Desde 361px hasta 767px. 
-   Aquí va tu diseño estándar para móviles (1 columna, menús colapsados).
+   Navegación Principal (Navbar)
    ========================================================================== */
-body {
-    font-size: 16px;
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--gray-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar {
-    flex-direction: column; /* El menú se apila verticalmente en móviles */
-    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
-.hero-title {
-    font-size: 2.2rem;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--black);
 }
 
-.features-grid {
-    grid-template-columns: 1fr; /* Una sola columna para tarjetas */
-    gap: 20px;
+.logo span {
+    color: var(--primary-blue);
 }
 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gray-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+.btn-header {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-header:hover {
+    background-color: var(--primary-blue);
+}
 
 /* ==========================================================================
-   2. MEDIA QUERY: CELULAR MINIATURA / SMARTWATCHES
-   Rango: Pantallas de 360px o menos (ej. iPhone SE antiguo, relojes, pantallas mini)
+   Sección Hero
    ========================================================================== */
-@media screen and (max-width: 360px) {
-    body {
-        font-size: 14px; /* Reducimos texto general para evitar desbordes */
-        padding: 5px;
-    }
-
-    .hero-title {
-        font-size: 1.8rem; /* Títulos más pequeños */
-    }
-
-    .btn {
-        padding: 10px 15px;
-        width: 100%; /* Botones a lo ancho total para facilitar el clic */
-        text-align: center;
-    }
-
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
+.hero {
+    background: linear-gradient(135deg, var(--gray-light) 0%, var(--light-blue) 100%);
+    padding: 6rem 2rem;
+    text-align: center;
 }
 
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--gray-dark);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-blue);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--black);
+    border: 2px solid var(--black);
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
 
 /* ==========================================================================
-   3. MEDIA QUERY: ESCRITORIO / PANTALLAS GRANDES
-   Rango: Desde 768px en adelante (Tabletas en horizontal, Laptops y Monitores)
+   Diseño Responsivo (Mobile First / Breakpoints)
    ========================================================================== */
-@media screen and (min-width: 768px) {
+@media (max-width: 768px) {
     .navbar {
-        flex-direction: row; /* Menú horizontal clásico */
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 1rem;
     }
-
-    .hero-section {
-        padding: 80px 40px;
-        text-align: left; /* Alineación limpia a la izquierda */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .nav-links {
+        gap: 1rem;
+        padding: 0;
     }
-
-    .hero-title {
-        font-size: 3.5rem;
-        max-width: 600px;
+    .hero h1 {
+        font-size: 2.2rem;
     }
-
-    .features-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 Columnas puras de tarjetas */
-        gap: 30px;
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
     }
 }
