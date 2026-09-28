@@ -4,7 +4,7 @@ Proyecto web en equipo hecho con HTML, CSS y JavaScript para la materia **Desarr
 
 Somos cuatro. El sitio tiene una portada, un perfil individual por integrante, navegación entre todas las páginas y una bitácora donde contamos cómo lo fuimos armando.
 
-**Sitio publicado:** https://frontendtp1eq25.vercel.app/
+**Sitio publicado:** https://front-end-tp-1-gray.vercel.app/
 
 ## Integrantes
 
@@ -32,13 +32,14 @@ Somos cuatro. El sitio tiene una portada, un perfil individual por integrante, n
 ├── bitacora.html         bitácora del proceso
 ├── perfil-2.html         Javier
 ├── perfil-3.html         Rocío
-├── perfil-4.html         Facundo (en construcción)
+├── perfil-4.html         Facundo
 ├── perfil-5.html         Damián
 ├── perfil-template.html  plantilla base de los perfiles
 ├── css/
 │   ├── style.css         variables y estilos base
 │   ├── header-footer.css header y footer compartidos por todas las páginas
-│   └── perfil.css        estilos de los perfiles (carruseles, etiquetas, tarjetas)
+│   ├── perfil.css        estilos de los perfiles (carruseles, etiquetas, tarjetas)
+│   └── home.css          estilos exclusivos de la portada (hero, tarjetas, cta)
 ├── js/
 │   ├── home.js           función de la portada
 │   ├── perfil.js         filtros, carruseles y tarjetas de los perfiles
@@ -87,7 +88,7 @@ Portada, header y footer:
 | Portada | `js/home.js` | El botón **Sorprendeme** elige un integrante al azar y abre su perfil. |
 | Perfil de Javier | `js/perfil.js` | Filtro de habilidades por categoría, carruseles de películas y discos, y tarjetas que se dan vuelta al hacer clic. |
 | Perfil de Rocío | `js/perfil.js` | Filtro de habilidades (Desarrollo / Ciberseguridad) y carruseles de películas y canciones. |
-| Perfiles con carrusel (Rocío, Damián) | `js/perfil.js` | Carruseles de películas y discos con flechas y puntos. Al cambiar de slide se frena el video o el disco que estaba sonando. |
+| Perfiles con carrusel (Rocío, Facundo, Damián) | `js/perfil.js` | Carruseles de películas y discos con flechas y puntos. Al cambiar de slide se frena el video o el disco que estaba sonando. |
 | Perfil de Damián | `js/damian.js` | _Pendiente: su función propia._ |
 
 ## Cómo verlo en local
@@ -121,12 +122,8 @@ En cumplimiento con el requisito transversal establecido en la consigna del TP1:
 * **Generación de Imágenes e Ilustraciones:** **No se utilizaron herramientas de IA para la creación de imágenes, logotipos ni avatares.** Todos los recursos visuales del sitio corresponden a fotografías/avatares propios de los integrantes y los íconos técnicos provienen directamente de fuentes vectoriales y la CDN de Devicon.
 * **Revisión y Control Humano:** Cada sugerencia de código generada por IA fue probada, modificada y adaptada activamente por los integrantes del equipo antes de integrarse al repositorio grupal. Se aseguró la comprensión completa del código fuente para mantener la autoría y la responsabilidad técnica del proyecto.
 
-```
 ## Pendientes
 
 - Capturas de pantalla de la portada y de cada perfil.
-- Publicar en Vercel y agregar la URL.
-- Datos de Facundo y su GitHub.
-- Función dinámica propia en los perfiles de Rocío y Damián (hoy comparten el filtro y el carrusel generales).
-- Breakpoints de 400, 900 y 1200 px en la portada.
-- Completar la bitácora con las decisiones del equipo.
+- GitHub de Facundo.
+- Función dinámica propia en los perfiles de Rocío, Facundo y Damián (hoy comparten el filtro y el carrusel generales).
