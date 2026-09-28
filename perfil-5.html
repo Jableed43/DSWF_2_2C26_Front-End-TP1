@@ -1,139 +1,234 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perfil - Damián Gorosito</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/perfil.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Damián Gorosito · BlueTech</title>
+    <!-- Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Devicon CDN para íconos de tecnologías -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicon/devicon@latest/devicon.min.css">
+    <!-- Hojas de estilo del proyecto -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/perfil.css">
 
-    <script src="js/nav.js" defer></script>
-    <script src="js/perfil.js" defer></script>
-    <script src="js/damian.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">Blue<span>Tech</span></div>
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="index.html#perfiles">Perfiles</a></li>
-          <li><a href="bitacora.html">Bitácora</a></li>
-          <li class="dropdown">
-            <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-              Integrantes <span class="dropdown-flecha" aria-hidden="true">&#9662;</span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="perfil-2.html">Javier López</a></li>
-              <li><a href="perfil-3.html">Rocío Arenas</a></li>
-              <li><a href="perfil-4.html">Facundo Sánchez</a></li>
-              <li><a href="perfil-5.html">Damián Gorosito</a></li>
+    <!-- Estilos de la estructura y animación del perfil -->
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Botón e interacción de JS propia */
+        .interaccion-damian {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-animacion {
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-animacion:hover {
+            background-color: #1e40af;
+            transform: scale(1.05);
+        }
+
+        .mensaje-oculto {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0066cc;
+        }
+
+        .mensaje-visible {
+            opacity: 1;
+        }
+
+        @keyframes efectoBrilloGiro {
+            0% {
+                transform: scale(1) rotate(0deg);
+                box-shadow: 0 0 0px rgba(37, 99, 235, 0);
+            }
+            50% {
+                transform: scale(1.08) rotate(4deg);
+                box-shadow: 0 0 25px rgba(37, 99, 235, 0.8);
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                box-shadow: 0 0 0px rgba(37, 99, 235, 0);
+            }
+        }
+
+        .animacion-efecto {
+            animation: efectoBrilloGiro 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado y Navegación Principal -->
+    <header class="header-principal">
+        <nav class="nav-container container">
+            <div class="logo">
+                <a href="index.html"><strong>BlueTech</strong></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#cine">Cine</a></li>
+                <li><a href="#musica">Música</a></li>
+                <li><a href="bitacora.html">Bitácora</a></li>
+                <li class="dropdown">
+                    <a href="#">Integrantes ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="perfil-2.html">Javier López</a></li>
+                        <li><a href="perfil-3.html">Rocío Arenas</a></li>
+                        <li><a href="perfil-4.html">Facundo Sánchez</a></li>
+                        <li><a href="perfil-5.html" class="active">Damián Gorosito</a></li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-      </nav>
+        </nav>
     </header>
 
-    <main>
-      <h1 class="nombre-brillante">Damián Gorosito</h1>
+    <!-- Contenido Principal -->
+    <main class="container">
 
-      <img class="avatar-perfil" src="img/damian/avatar.jpg" alt="Foto de Damián Gorosito" width="160" height="160">
+        <!-- Tarjeta Principal / Sobre Mí -->
+        <section id="sobre-mi" class="perfil-card">
+            <div class="perfil-header">
+                <img src="img/damian/avatar.png" alt="Avatar de Damián Gorosito" class="avatar-perfil" id="avatar-damian">
+                <div class="perfil-info">
+                    <h1>Damián Gorosito</h1>
+                    <p class="rol">Desarrollador Front End & Redactor Técnico</p>
+                    <ul class="datos-personales">
+                        <li>📍 <strong>Ciudad:</strong> Buenos Aires, Argentina</li>
+                        <li>🎂 <strong>Edad:</strong> 24 años</li>
+                        <li>💻 <strong>GitHub:</strong> <a href="https://github.com/damiangorosito" target="_blank">@damiangorosito</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-      <h2 id="titulo-sobre-mi">Sobre mí</h2>
+        <!-- Bloque de Interacción Dinámica (JS propio) -->
+        <section class="interaccion-damian">
+            <h2>Interacción Interactiva</h2>
+            <p>Haz clic en el botón para activar la animación sobre el avatar y desplegar el saludo dinámico:</p>
+            <button id="btn-animar-damian" class="btn-animacion">
+                ⚡ ¡Saludar e Iluminar Perfil!
+            </button>
+            <p id="mensaje-animado" class="mensaje-oculto"></p>
+        </section>
 
-      <section class="sobre-mi" aria-labelledby="titulo-sobre-mi">
-        <p class="sobre-mi-contacto">📍 Buenos Aires, Argentina &middot; 🎂 35 años
-          &middot; <a class="enlace-github" href="https://github.com/damiangorosito" target="_blank" rel="noopener">GitHub</a>
-        </p>
-      </section>
+        <!-- Sección de Habilidades (Mínimo 4) -->
+        <section id="habilidades" class="seccion-perfil">
+            <h2>Habilidades Técnicas</h2>
+            <div class="grid-habilidades">
+                <div class="tarjeta-habilidad">
+                    <i class="devicon-html5-plain colored"></i>
+                    <h3>HTML5</h3>
+                    <p>Estructuración semántica e intencional de maquetas web.</p>
+                </div>
+                <div class="tarjeta-habilidad">
+                    <i class="devicon-css3-plain colored"></i>
+                    <h3>CSS3 & Layouts</h3>
+                    <p>Diseño adaptable mediante CSS Grid, Flexbox y media queries.</p>
+                </div>
+                <div class="tarjeta-habilidad">
+                    <i class="devicon-javascript-plain colored"></i>
+                    <h3>JavaScript Vanilla</h3>
+                    <p>Desarrollo de lógica dinámica e interacciones sin librerías.</p>
+                </div>
+                <div class="tarjeta-habilidad">
+                    <i class="devicon-git-plain colored"></i>
+                    <h3>Git & GitHub</h3>
+                    <p>Control de versiones colaborativo y gestión de ramas.</p>
+                </div>
+            </div>
+        </section>
 
-      <h2 id="titulo-habilidades">Habilidades</h2>
+        <!-- Sección de Películas Favoritas (Mínimo 3) -->
+        <section id="cine" class="seccion-perfil">
+            <h2>Películas Favoritas 🎬</h2>
+            <div class="carrusel-contenedor" id="carrusel-peliculas">
+                <div class="grid-tarjetas">
+                    <article class="tarjeta-media">
+                        <img src="img/damian/peli1.jpg" alt="Pelicula 1">
+                        <h3>Interstellar</h3>
+                        <p>Ciencia ficción y exploración espacial dirigida por Christopher Nolan.</p>
+                    </article>
+                    <article class="tarjeta-media">
+                        <img src="img/damian/peli2.jpg" alt="Pelicula 2">
+                        <h3>Matrix</h3>
+                        <p>Un clásico del cine de acción y cibernética de las hermanas Wachowski.</p>
+                    </article>
+                    <article class="tarjeta-media">
+                        <img src="img/damian/peli3.jpg" alt="Pelicula 3">
+                        <h3>El Club de la Pelea</h3>
+                        <p>Drama psicológico y crítica social dirigido por David Fincher.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-      <section class="skill-block" data-categoria="tecnicas">
-        <div class="skill-chip-grupo">
-          <span class="skill-chip">🐍 Python</span>
-          <span class="skill-chip">🌐 HTML5 &amp; CSS3</span>
-          <span class="skill-chip">🧠 Lógica de programación</span>
-          <span class="skill-chip">🧩 Resolución de problemas</span>
-        </div>
-      </section>
+        <!-- Sección de Discos Favoritos (Mínimo 3) -->
+        <section id="musica" class="seccion-perfil">
+            <h2>Discos Favoritos 🎵</h2>
+            <div class="carrusel-contenedor" id="carrusel-discos">
+                <div class="grid-tarjetas">
+                    <article class="tarjeta-media">
+                        <img src="img/damian/disco1.jpg" alt="Disco 1">
+                        <h3>Random Access Memories</h3>
+                        <p><strong>Daft Punk</strong> (2013)</p>
+                    </article>
+                    <article class="tarjeta-media">
+                        <img src="img/damian/disco2.jpg" alt="Disco 2">
+                        <h3>The Dark Side of the Moon</h3>
+                        <p><strong>Pink Floyd</strong> (1973)</p>
+                    </article>
+                    <article class="tarjeta-media">
+                        <img src="img/damian/disco3.jpg" alt="Disco 3">
+                        <h3>Oktubre</h3>
+                        <p><strong>Patricio Rey y sus Redonditos de Ricota</strong> (1986)</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-      <h2 id="titulo-peliculas">Películas favoritas</h2>
-
-      <section class="carousel" aria-labelledby="titulo-peliculas" data-etiqueta-slide="la película">
-        <button type="button" class="carousel-flecha carousel-flecha--prev" aria-label="Película anterior">&#10094;</button>
-
-        <div class="carousel-ventana">
-          <ul class="carousel-pista" id="carousel-pista-peliculas">
-            <li class="carousel-slide">
-              <h3>El Señor de los Anillos</h3>
-              <div class="carousel-video">
-                <iframe src="https://www.youtube.com/embed/_nZdmwHrcnw" title="El Señor de los Anillos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
-            </li>
-            <li class="carousel-slide">
-              <h3>El Gran Pez</h3>
-              <div class="carousel-video">
-                <iframe src="https://www.youtube.com/embed/JZTE078OmZg" title="El Gran Pez" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
-            </li>
-            <li class="carousel-slide">
-              <h3>Pulp Fiction</h3>
-              <div class="carousel-video">
-                <iframe src="https://www.youtube.com/embed/r-PSxjTR174" title="Pulp Fiction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <button type="button" class="carousel-flecha carousel-flecha--next" aria-label="Película siguiente">&#10095;</button>
-
-        <div class="carousel-puntos" id="carousel-puntos-peliculas"></div>
-      </section>
-
-      <h2 id="titulo-discos">Discos favoritos</h2>
-
-      <section class="carousel" aria-labelledby="titulo-discos" data-etiqueta-slide="el disco">
-        <button type="button" class="carousel-flecha carousel-flecha--prev" aria-label="Disco anterior">&#10094;</button>
-
-        <div class="carousel-ventana">
-          <ul class="carousel-pista" id="carousel-pista-discos">
-            <li class="carousel-slide">
-              <div class="carousel-spotify">
-                <iframe src="https://open.spotify.com/embed/album/573TG9cHInMww2QgBeKqTy?utm_source=generator" title="Señales - Callejeros" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-              </div>
-              <p class="carousel-nota">Canción favorita: Creo</p>
-            </li>
-            <li class="carousel-slide">
-              <div class="carousel-spotify">
-                <iframe src="https://open.spotify.com/embed/album/0lKGADKI9s71jBqJe5xYhn?utm_source=generator" title="Feed the Machine - Poor Man's Poison" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-              </div>
-            </li>
-            <li class="carousel-slide">
-              <div class="carousel-spotify">
-                <iframe src="https://open.spotify.com/embed/album/5kk3PbroAezGBPucpoN4oC?utm_source=generator" title="Luzbelito - Patricio Rey y sus Redonditos de Ricota" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <button type="button" class="carousel-flecha carousel-flecha--next" aria-label="Disco siguiente">&#10095;</button>
-
-        <div class="carousel-puntos" id="carousel-puntos-discos"></div>
-      </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 BlueTech Proyecto. Todos los derechos reservados.</p>
+    <!-- Pie de Página -->
+    <footer class="footer-principal">
+        <div class="container">
+            <p>&copy; 2026 BlueTech · Desarrollo de Sistemas Web Front End (Comisión 2C26).</p>
+        </div>
     </footer>
-  </body>
+
+    <!-- Scripts de JavaScript -->
+    <script src="js/perfil.js"></script>
+    <script src="js/damian.js"></script>
+</body>
 </html>
